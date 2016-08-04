@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C4h-I0-4Ko">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--First Page View Controller-->
+        <scene sceneID="AxP-XT-yaJ">
+            <objects>
+                <viewController id="EoK-g0-lDz" customClass="FirstPageViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W8v-FP-yeH"/>
+                        <viewControllerLayoutGuide type="bottom" id="JFj-k1-80s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sy2-W0-q0R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allearn" translatesAutoresizingMaskIntoConstraints="NO" id="p9Z-Ip-1Y9">
+                                <rect key="frame" x="62" y="84" width="250" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="4K6-XF-4Ec"/>
+                                    <constraint firstAttribute="height" constant="120" id="uM5-P3-TzJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL EARN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEc-fo-n11">
+                                <rect key="frame" x="148" y="234" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ยินดีต้อนรับ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhi-LO-AYO">
+                                <rect key="frame" x="146" y="270" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjN-iH-2oE">
+                                <rect key="frame" x="20" y="597" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rxe-dj-dhL"/>
+                                </constraints>
+                                <state key="normal" title="สมัครสมาชิก"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW3-0q-PTV">
+                                <rect key="frame" x="20" y="537" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WTo-xO-SEi"/>
+                                </constraints>
+                                <state key="normal" title="เข้าสู่ระบบ"/>
+                                <connections>
+                                    <segue destination="Ohl-7x-VDO" kind="show" id="aMd-gm-Wim"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06r-se-YNk">
+                                <rect key="frame" x="20" y="479" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tUc-bc-ARk"/>
+                                </constraints>
+                                <state key="normal" title="Facebook"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oW3-0q-PTV" secondAttribute="trailing" constant="20" id="8OX-Ls-U2y"/>
+                            <constraint firstItem="JEc-fo-n11" firstAttribute="top" secondItem="p9Z-Ip-1Y9" secondAttribute="bottom" constant="30" id="A3K-MY-2h1"/>
+                            <constraint firstItem="p9Z-Ip-1Y9" firstAttribute="top" secondItem="W8v-FP-yeH" secondAttribute="bottom" constant="20" id="AEl-Fc-gxb"/>
+                            <constraint firstAttribute="trailing" secondItem="06r-se-YNk" secondAttribute="trailing" constant="20" id="GFc-hd-Mvg"/>
+                            <constraint firstItem="06r-se-YNk" firstAttribute="leading" secondItem="Sy2-W0-q0R" secondAttribute="leading" constant="20" id="IIJ-Tw-Iji"/>
+                            <constraint firstItem="EjN-iH-2oE" firstAttribute="leading" secondItem="Sy2-W0-q0R" secondAttribute="leading" constant="20" id="OuZ-8s-DkC"/>
+                            <constraint firstItem="zhi-LO-AYO" firstAttribute="top" secondItem="JEc-fo-n11" secondAttribute="bottom" constant="15" id="Ud0-AZ-bDk"/>
+                            <constraint firstAttribute="trailing" secondItem="EjN-iH-2oE" secondAttribute="trailing" constant="20" id="WDx-OJ-zij"/>
+                            <constraint firstItem="oW3-0q-PTV" firstAttribute="leading" secondItem="Sy2-W0-q0R" secondAttribute="leading" constant="20" id="aPr-aI-iJ8"/>
+                            <constraint firstItem="p9Z-Ip-1Y9" firstAttribute="centerX" secondItem="Sy2-W0-q0R" secondAttribute="centerX" id="hl6-fD-01t"/>
+                            <constraint firstItem="JFj-k1-80s" firstAttribute="top" secondItem="EjN-iH-2oE" secondAttribute="bottom" constant="30" id="iJy-HG-I7U"/>
+                            <constraint firstItem="oW3-0q-PTV" firstAttribute="top" secondItem="06r-se-YNk" secondAttribute="bottom" constant="18" id="izv-XJ-3iz"/>
+                            <constraint firstItem="zhi-LO-AYO" firstAttribute="centerX" secondItem="Sy2-W0-q0R" secondAttribute="centerX" id="wGk-xA-NNX"/>
+                            <constraint firstItem="EjN-iH-2oE" firstAttribute="top" secondItem="oW3-0q-PTV" secondAttribute="bottom" constant="20" id="x8F-j3-gla"/>
+                            <constraint firstItem="JEc-fo-n11" firstAttribute="centerX" secondItem="Sy2-W0-q0R" secondAttribute="centerX" id="yeI-zi-B39"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2G3-4L-L7a"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="68C-GE-k1j" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676.5" y="490.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CBd-WH-Iht">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C4h-I0-4Ko" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KK5-vn-a8h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EoK-g0-lDz" kind="relationship" relationship="rootViewController" id="SQM-UT-YrR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCS-la-ARo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="491"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="g7g-Jn-O7a">
+            <objects>
+                <viewController id="52L-NF-UWh" customClass="ViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6It-ok-kvE"/>
+                        <viewControllerLayoutGuide type="bottom" id="riF-7s-7qn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oO3-RE-V0m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QVo-kC-ppS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCg-8b-QOE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676.5" y="1316.5"/>
+        </scene>
+        <!--เข้าสู่ระบบ-->
+        <scene sceneID="fko-97-F31">
+            <objects>
+                <viewController id="Ohl-7x-VDO" customClass="FirstPageViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fa7-V0-aQh"/>
+                        <viewControllerLayoutGuide type="bottom" id="odB-09-26F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t78-te-Ohb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="เข้าสู่ระบบ" id="kdU-KB-Yd5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BeG-RJ-w3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204.5" y="490.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wwS-kp-6r9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ol6-bP-SCV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WOw-Au-VlC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="52L-NF-UWh" kind="relationship" relationship="rootViewController" id="NRf-Ro-kon"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JuV-gG-ljY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.5" y="1316.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="allearn" width="191" height="200"/>
+    </resources>
+</document>
