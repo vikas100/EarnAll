@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allearn" translatesAutoresizingMaskIntoConstraints="NO" id="p9Z-Ip-1Y9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money-bag" translatesAutoresizingMaskIntoConstraints="NO" id="p9Z-Ip-1Y9">
                                 <rect key="frame" x="62" y="84" width="250" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="4K6-XF-4Ec"/>
@@ -25,15 +25,15 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL EARN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEc-fo-n11">
-                                <rect key="frame" x="148" y="234" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="131" y="234" width="113" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ยินดีต้อนรับ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhi-LO-AYO">
-                                <rect key="frame" x="146" y="270" width="82" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="139" y="279" width="97" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjN-iH-2oE">
@@ -41,14 +41,37 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="rxe-dj-dhL"/>
                                 </constraints>
-                                <state key="normal" title="สมัครสมาชิก"/>
+                                <state key="normal" title="สมัครสมาชิก">
+                                    <color key="titleColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="E3m-4s-x54" kind="show" id="dQD-uN-Ig0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW3-0q-PTV">
                                 <rect key="frame" x="20" y="537" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="WTo-xO-SEi"/>
                                 </constraints>
-                                <state key="normal" title="เข้าสู่ระบบ"/>
+                                <state key="normal" title="เข้าสู่ระบบ">
+                                    <color key="titleColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Ohl-7x-VDO" kind="show" id="aMd-gm-Wim"/>
                                 </connections>
@@ -58,7 +81,17 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tUc-bc-ARk"/>
                                 </constraints>
-                                <state key="normal" title="Facebook"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -106,7 +139,7 @@
             </objects>
             <point key="canvasLocation" x="142" y="491"/>
         </scene>
-        <!--View Controller-->
+        <!--สินค้า-->
         <scene sceneID="g7g-Jn-O7a">
             <objects>
                 <viewController id="52L-NF-UWh" customClass="ViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,18 +150,40 @@
                     <view key="view" contentMode="scaleToFill" id="oO3-RE-V0m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QVo-kC-ppS"/>
+                    <tabBarItem key="tabBarItem" title="สินค้า" image="product" id="z74-c9-Yrk"/>
+                    <navigationItem key="navigationItem" title="สินค้า" id="QVo-kC-ppS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCg-8b-QOE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676.5" y="1316.5"/>
+            <point key="canvasLocation" x="1204.5" y="1316.5"/>
+        </scene>
+        <!--QR-->
+        <scene sceneID="2oH-WO-LUX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgW-O8-lBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="xlF-2E-qFX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="giS-lt-drJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="JeL-M3-naS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="baa-gs-YeJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.51234210820000003" blue="0.46505785100000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="QR" image="qr" id="mng-2w-Hca"/>
+                    <navigationItem key="navigationItem" title="QR" id="X2c-8W-Ocz"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="676.5" y="2137.5"/>
         </scene>
         <!--เข้าสู่ระบบ-->
         <scene sceneID="fko-97-F31">
             <objects>
-                <viewController id="Ohl-7x-VDO" customClass="FirstPageViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ohl-7x-VDO" customClass="LogInViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fa7-V0-aQh"/>
                         <viewControllerLayoutGuide type="bottom" id="odB-09-26F"/>
@@ -136,7 +191,80 @@
                     <view key="view" contentMode="scaleToFill" id="t78-te-Ohb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="อีเมล์" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qt2-Ug-wHn">
+                                <rect key="frame" x="20" y="164" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="s1r-3g-TgD"/>
+                                </constraints>
+                                <color key="textColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anq-mi-40A">
+                                <rect key="frame" x="21" y="294" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="DM7-cx-X4k"/>
+                                    <constraint firstAttribute="height" constant="40" id="F00-GW-uj7"/>
+                                </constraints>
+                                <state key="normal" title="เข้าสู่ระบบ">
+                                    <color key="titleColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DM7-cx-X4k"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sendActionButton:" destination="Ohl-7x-VDO" eventType="touchUpInside" id="q6N-oe-MkR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="รหัสผ่าน" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xzj-dk-xyQ">
+                                <rect key="frame" x="20" y="229" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3SA-DE-vcw"/>
+                                </constraints>
+                                <color key="textColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="anq-mi-40A" firstAttribute="leading" secondItem="t78-te-Ohb" secondAttribute="leading" constant="21" id="0yI-17-rn1"/>
+                            <constraint firstItem="Xzj-dk-xyQ" firstAttribute="top" secondItem="Qt2-Ug-wHn" secondAttribute="bottom" constant="25" id="58f-3W-nXg"/>
+                            <constraint firstItem="Xzj-dk-xyQ" firstAttribute="leading" secondItem="t78-te-Ohb" secondAttribute="leading" constant="20" id="GG7-pe-jd0"/>
+                            <constraint firstItem="Qt2-Ug-wHn" firstAttribute="top" secondItem="Fa7-V0-aQh" secondAttribute="bottom" constant="100" id="Ust-lc-E4z"/>
+                            <constraint firstAttribute="trailing" secondItem="Qt2-Ug-wHn" secondAttribute="trailing" constant="20" id="amx-SG-IL6"/>
+                            <constraint firstItem="anq-mi-40A" firstAttribute="top" secondItem="Xzj-dk-xyQ" secondAttribute="bottom" constant="25" id="apR-lw-29m"/>
+                            <constraint firstItem="Qt2-Ug-wHn" firstAttribute="leading" secondItem="t78-te-Ohb" secondAttribute="leading" constant="20" id="ifF-of-Ns0"/>
+                            <constraint firstAttribute="trailing" secondItem="anq-mi-40A" secondAttribute="trailing" constant="20" id="uYY-sN-Apc"/>
+                            <constraint firstAttribute="trailing" secondItem="Xzj-dk-xyQ" secondAttribute="trailing" constant="20" id="ykQ-T4-xmu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="เข้าสู่ระบบ" id="kdU-KB-Yd5"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -145,10 +273,310 @@
             </objects>
             <point key="canvasLocation" x="1204.5" y="490.5"/>
         </scene>
+        <!--สมัครสมาชิก-->
+        <scene sceneID="UcT-cD-xhR">
+            <objects>
+                <viewController id="E3m-4s-x54" customClass="RegisterViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tiE-C8-CuI"/>
+                        <viewControllerLayoutGuide type="bottom" id="mb0-zU-Xkl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6yk-gZ-nNJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ชื่อ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXT-to-TDw">
+                                <rect key="frame" x="20" y="94" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="D4R-PT-Fgg"/>
+                                    <constraint firstAttribute="height" constant="40" id="wh6-gI-luf"/>
+                                </constraints>
+                                <color key="textColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="D4R-PT-Fgg"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="นามสกุล" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgv-nD-pt9">
+                                <rect key="frame" x="20" y="164" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nAP-gl-0Kc"/>
+                                </constraints>
+                                <color key="textColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="เบอร์มือถือ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CzJ-Fi-sn1">
+                                <rect key="frame" x="20" y="234" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tE1-m5-NJD"/>
+                                </constraints>
+                                <color key="textColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="อีเมล์" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBV-cv-vLs">
+                                <rect key="frame" x="20" y="304" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wN4-Dh-gAq"/>
+                                </constraints>
+                                <color key="textColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ยืนยันรหัสผ่าน" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-e3-etz">
+                                <rect key="frame" x="20" y="444" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SHw-qw-kE9"/>
+                                </constraints>
+                                <color key="textColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3q-Nm-b1j">
+                                <rect key="frame" x="20" y="524" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="0gv-AF-u6n"/>
+                                    <constraint firstAttribute="height" constant="40" id="Vr4-SL-FRk"/>
+                                </constraints>
+                                <state key="normal" title="ตกลง">
+                                    <color key="titleColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0gv-AF-u6n"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="Mex-cF-9w1" kind="show" id="sX3-Vl-edo"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="รหัสผ่าน" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p2i-OH-OQE">
+                                <rect key="frame" x="20" y="374" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Lfa-LM-aia"/>
+                                </constraints>
+                                <color key="textColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cXT-to-TDw" secondAttribute="trailing" constant="20" id="1f5-zW-ksq"/>
+                            <constraint firstItem="cXT-to-TDw" firstAttribute="top" secondItem="tiE-C8-CuI" secondAttribute="bottom" constant="30" id="3Ma-Fh-iz2"/>
+                            <constraint firstAttribute="trailing" secondItem="jBV-cv-vLs" secondAttribute="trailing" constant="20" id="77i-th-Bpu"/>
+                            <constraint firstAttribute="trailing" secondItem="CzJ-Fi-sn1" secondAttribute="trailing" constant="20" id="7O9-Mg-9he"/>
+                            <constraint firstItem="CzJ-Fi-sn1" firstAttribute="leading" secondItem="6yk-gZ-nNJ" secondAttribute="leading" constant="20" id="7Ob-FP-upJ"/>
+                            <constraint firstItem="Sap-e3-etz" firstAttribute="top" secondItem="p2i-OH-OQE" secondAttribute="bottom" constant="30" id="ARa-Hx-1bJ"/>
+                            <constraint firstAttribute="trailing" secondItem="p2i-OH-OQE" secondAttribute="trailing" constant="20" id="CtW-P1-RJ3"/>
+                            <constraint firstItem="jBV-cv-vLs" firstAttribute="top" secondItem="CzJ-Fi-sn1" secondAttribute="bottom" constant="30" id="D3K-7c-dfG"/>
+                            <constraint firstItem="lgv-nD-pt9" firstAttribute="top" secondItem="cXT-to-TDw" secondAttribute="bottom" constant="30" id="K4s-xC-f7p"/>
+                            <constraint firstItem="p2i-OH-OQE" firstAttribute="leading" secondItem="6yk-gZ-nNJ" secondAttribute="leading" constant="20" id="Kyl-EU-ZOy"/>
+                            <constraint firstAttribute="trailing" secondItem="Sap-e3-etz" secondAttribute="trailing" constant="20" id="M2V-cF-O9v"/>
+                            <constraint firstAttribute="trailing" secondItem="lgv-nD-pt9" secondAttribute="trailing" constant="20" id="OqM-kE-Q9h"/>
+                            <constraint firstItem="Sap-e3-etz" firstAttribute="leading" secondItem="6yk-gZ-nNJ" secondAttribute="leading" constant="20" id="TlJ-uL-g0A"/>
+                            <constraint firstItem="cXT-to-TDw" firstAttribute="leading" secondItem="6yk-gZ-nNJ" secondAttribute="leading" constant="20" id="bFP-AZ-7rK"/>
+                            <constraint firstItem="CzJ-Fi-sn1" firstAttribute="top" secondItem="lgv-nD-pt9" secondAttribute="bottom" constant="30" id="muw-EK-7f7"/>
+                            <constraint firstItem="m3q-Nm-b1j" firstAttribute="top" secondItem="Sap-e3-etz" secondAttribute="bottom" constant="40" id="pKn-oF-VeQ"/>
+                            <constraint firstAttribute="trailing" secondItem="m3q-Nm-b1j" secondAttribute="trailing" constant="20" id="pZ4-lh-nEJ"/>
+                            <constraint firstItem="p2i-OH-OQE" firstAttribute="top" secondItem="jBV-cv-vLs" secondAttribute="bottom" constant="30" id="uVs-OZ-smm"/>
+                            <constraint firstItem="jBV-cv-vLs" firstAttribute="leading" secondItem="6yk-gZ-nNJ" secondAttribute="leading" constant="20" id="vMg-oI-pf8"/>
+                            <constraint firstItem="m3q-Nm-b1j" firstAttribute="leading" secondItem="6yk-gZ-nNJ" secondAttribute="leading" constant="20" id="y7R-yS-fzz"/>
+                            <constraint firstItem="lgv-nD-pt9" firstAttribute="leading" secondItem="6yk-gZ-nNJ" secondAttribute="leading" constant="20" id="yYH-0e-YsO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="สมัครสมาชิก" id="Uqb-be-s6F"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIo-j7-Gqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739.5" y="490.5"/>
+        </scene>
+        <!--สมัครสมาชิก-->
+        <scene sceneID="ask-Do-2QZ">
+            <objects>
+                <viewController id="Mex-cF-9w1" customClass="OTPViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aJt-uI-qR5"/>
+                        <viewControllerLayoutGuide type="bottom" id="f0y-Pm-Se8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q5f-ng-VMD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="กรอก OPT" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HsP-Cg-KEd">
+                                <rect key="frame" x="20" y="273" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="H3g-2B-BV3"/>
+                                    <constraint firstAttribute="height" constant="40" id="IFJ-Jf-MVk"/>
+                                </constraints>
+                                <color key="textColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="H3g-2B-BV3"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ref. RICH99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxL-Sx-2CQ">
+                                <rect key="frame" x="0.0" y="225" width="375" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gc-c2-LHo">
+                                <rect key="frame" x="20" y="577" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="0HK-Mq-n1x"/>
+                                    <constraint firstAttribute="height" constant="40" id="6wv-cz-ZsM"/>
+                                </constraints>
+                                <state key="normal" title="ยืนยัน">
+                                    <color key="titleColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0HK-Mq-n1x"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sendActionButton:" destination="Mex-cF-9w1" eventType="touchUpInside" id="7Mm-Kh-ZlM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeO-hO-Zua">
+                                <rect key="frame" x="20" y="507" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="5fR-os-Cch"/>
+                                    <constraint firstAttribute="height" constant="40" id="9hE-B9-NTM"/>
+                                </constraints>
+                                <state key="normal" title="ขอรหัสใหม่">
+                                    <color key="titleColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5fR-os-Cch"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KxL-Sx-2CQ" firstAttribute="leading" secondItem="q5f-ng-VMD" secondAttribute="leading" id="4xN-Ay-dqs"/>
+                            <constraint firstItem="KxL-Sx-2CQ" firstAttribute="centerX" secondItem="q5f-ng-VMD" secondAttribute="centerX" id="H2v-3X-KlY"/>
+                            <constraint firstItem="f0y-Pm-Se8" firstAttribute="top" secondItem="8gc-c2-LHo" secondAttribute="bottom" constant="50" id="JQ3-gh-J4U"/>
+                            <constraint firstItem="HsP-Cg-KEd" firstAttribute="top" secondItem="KxL-Sx-2CQ" secondAttribute="bottom" constant="30" id="SJl-NW-pcE"/>
+                            <constraint firstItem="8gc-c2-LHo" firstAttribute="leading" secondItem="q5f-ng-VMD" secondAttribute="leading" constant="20" id="Tke-uN-jQv"/>
+                            <constraint firstItem="KxL-Sx-2CQ" firstAttribute="top" secondItem="aJt-uI-qR5" secondAttribute="bottom" constant="100" id="dzk-Nm-ud6"/>
+                            <constraint firstAttribute="trailing" secondItem="HsP-Cg-KEd" secondAttribute="trailing" constant="20" id="ffb-j2-Oqn"/>
+                            <constraint firstItem="ZeO-hO-Zua" firstAttribute="leading" secondItem="q5f-ng-VMD" secondAttribute="leading" constant="20" id="fk7-FU-bYG"/>
+                            <constraint firstItem="HsP-Cg-KEd" firstAttribute="leading" secondItem="q5f-ng-VMD" secondAttribute="leading" constant="20" id="hQx-qD-njf"/>
+                            <constraint firstItem="KxL-Sx-2CQ" firstAttribute="centerY" secondItem="q5f-ng-VMD" secondAttribute="centerY" constant="-100" id="hvG-xJ-7BC"/>
+                            <constraint firstAttribute="trailing" secondItem="ZeO-hO-Zua" secondAttribute="trailing" constant="20" id="j7O-K1-pTS"/>
+                            <constraint firstItem="8gc-c2-LHo" firstAttribute="top" secondItem="ZeO-hO-Zua" secondAttribute="bottom" constant="30" id="rKU-u7-dMZ"/>
+                            <constraint firstAttribute="trailing" secondItem="8gc-c2-LHo" secondAttribute="trailing" constant="20" id="wpD-5n-dJz"/>
+                            <constraint firstAttribute="trailing" secondItem="KxL-Sx-2CQ" secondAttribute="trailing" id="yt9-Ge-IGE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dzk-Nm-ud6"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="สมัครสมาชิก" id="hHd-qw-3ny"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a04-11-ndA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2271.5" y="490.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="wwS-kp-6r9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ol6-bP-SCV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LandingPageNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="ol6-bP-SCV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WOw-Au-VlC">
@@ -157,15 +585,82 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="52L-NF-UWh" kind="relationship" relationship="rootViewController" id="NRf-Ro-kon"/>
+                        <segue destination="2wm-3q-Vw8" kind="relationship" relationship="rootViewController" id="NRf-Ro-kon"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuV-gG-ljY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141.5" y="1316.5"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gzA-dC-E8l">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2wm-3q-Vw8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="20f-3m-1hC"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="3fC-7P-eMj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="52L-NF-UWh" kind="relationship" relationship="viewControllers" id="V5h-bB-moa"/>
+                        <segue destination="Q4u-yQ-dAu" kind="relationship" relationship="viewControllers" id="LyT-pq-PxA"/>
+                        <segue destination="QM7-po-LLm" kind="relationship" relationship="viewControllers" id="WJy-pc-iC9"/>
+                        <segue destination="xlF-2E-qFX" kind="relationship" relationship="viewControllers" id="3j8-ra-iQR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RbO-Ku-SYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676.5" y="1316.5"/>
+        </scene>
+        <!--แผนที่-->
+        <scene sceneID="IWI-kC-gse">
+            <objects>
+                <viewController id="Q4u-yQ-dAu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NpW-0q-Sh5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Idg-Sp-TMz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fJU-Hj-LEO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="แผนที่" image="map" id="QGF-Lk-Y3o"/>
+                    <navigationItem key="navigationItem" title="แผนที่" id="ecU-cO-8uS"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgr-7h-YW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739.5" y="1322.5"/>
+        </scene>
+        <!--สิทธิพิเศษ-->
+        <scene sceneID="U12-mW-WdC">
+            <objects>
+                <viewController id="QM7-po-LLm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QQx-Ca-JSE"/>
+                        <viewControllerLayoutGuide type="bottom" id="JXk-q7-MuL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ics-d3-2Ro">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="สิทธิพิเศษ" image="offer" id="hHD-nw-Vib"/>
+                    <navigationItem key="navigationItem" title="สิทธิพิเศษ" id="tgr-4x-aex"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yre-kh-LHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2271.5" y="1327.5"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="allearn" width="191" height="200"/>
+        <image name="map" width="21" height="21"/>
+        <image name="money-bag" width="170" height="170"/>
+        <image name="offer" width="21" height="21"/>
+        <image name="product" width="21" height="21"/>
+        <image name="qr" width="21" height="21"/>
     </resources>
 </document>
