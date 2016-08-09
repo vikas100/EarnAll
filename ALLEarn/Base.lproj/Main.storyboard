@@ -123,7 +123,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CBd-WH-Iht">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C4h-I0-4Ko" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FirstPageViewController" automaticallyAdjustsScrollViewInsets="NO" id="C4h-I0-4Ko" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KK5-vn-a8h">
@@ -142,7 +142,7 @@
         <!--สินค้า-->
         <scene sceneID="g7g-Jn-O7a">
             <objects>
-                <viewController id="52L-NF-UWh" customClass="ViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="52L-NF-UWh" customClass="ProductViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6It-ok-kvE"/>
                         <viewControllerLayoutGuide type="bottom" id="riF-7s-7qn"/>
@@ -150,20 +150,24 @@
                     <view key="view" contentMode="scaleToFill" id="oO3-RE-V0m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="สินค้า" image="product" id="z74-c9-Yrk"/>
-                    <navigationItem key="navigationItem" title="สินค้า" id="QVo-kC-ppS"/>
+                    <navigationItem key="navigationItem" title="สินค้า" id="QVo-kC-ppS">
+                        <barButtonItem key="leftBarButtonItem" image="hamberger" id="Mdc-xU-pvB">
+                            <connections>
+                                <action selector="hamburgerButtonAction:" destination="52L-NF-UWh" id="xQI-zh-a9D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCg-8b-QOE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204.5" y="1316.5"/>
+            <point key="canvasLocation" x="1791.5" y="1316.5"/>
         </scene>
         <!--QR-->
         <scene sceneID="2oH-WO-LUX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NgW-O8-lBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="xlF-2E-qFX" sceneMemberID="viewController">
+                <viewController id="xlF-2E-qFX" customClass="QRViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="giS-lt-drJ"/>
                         <viewControllerLayoutGuide type="bottom" id="JeL-M3-naS"/>
@@ -171,14 +175,22 @@
                     <view key="view" contentMode="scaleToFill" id="baa-gs-YeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.98431372549999996" green="0.51234210820000003" blue="0.46505785100000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="QR" image="qr" id="mng-2w-Hca"/>
-                    <navigationItem key="navigationItem" title="QR" id="X2c-8W-Ocz"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="QR" id="X2c-8W-Ocz">
+                        <barButtonItem key="leftBarButtonItem" image="hamberger" id="CGu-FE-MPC">
+                            <connections>
+                                <action selector="hamburgerButtonAction:" destination="xlF-2E-qFX" id="9Vj-sf-XPR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgW-O8-lBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676.5" y="2137.5"/>
+            <point key="canvasLocation" x="1204.5" y="2137.5"/>
         </scene>
         <!--เข้าสู่ระบบ-->
         <scene sceneID="fko-97-F31">
@@ -573,40 +585,70 @@
             </objects>
             <point key="canvasLocation" x="2271.5" y="490.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wwS-kp-6r9">
+        <!--Left Menu View Controller-->
+        <scene sceneID="az8-5Z-amQ">
             <objects>
-                <navigationController storyboardIdentifier="LandingPageNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="ol6-bP-SCV" sceneMemberID="viewController">
-                    <toolbarItems/>
+                <viewController storyboardIdentifier="LeftMenu" id="LVV-K6-e69" customClass="LeftMenuViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yMK-dI-X8B"/>
+                        <viewControllerLayoutGuide type="bottom" id="aZ3-iR-knZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wNe-do-rcG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hx8-ih-nnw">
+                                <rect key="frame" x="20" y="160" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9n4-gV-NIl"/>
+                                </constraints>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1937318908" green="0.65066964289999996" blue="0.90857189689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoutButtonAction:" destination="LVV-K6-e69" eventType="touchUpInside" id="2PV-IW-bTG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hx8-ih-nnw" firstAttribute="leading" secondItem="wNe-do-rcG" secondAttribute="leading" constant="20" id="Ia8-So-k8Q"/>
+                            <constraint firstItem="hx8-ih-nnw" firstAttribute="top" secondItem="yMK-dI-X8B" secondAttribute="bottom" constant="140" id="TtE-XA-QDa"/>
+                            <constraint firstAttribute="trailing" secondItem="hx8-ih-nnw" secondAttribute="trailing" constant="20" id="qBa-EB-oXo"/>
+                        </constraints>
+                    </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WOw-Au-VlC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="2wm-3q-Vw8" kind="relationship" relationship="rootViewController" id="NRf-Ro-kon"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JuV-gG-ljY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="foL-Le-i6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141.5" y="1316.5"/>
+            <point key="canvasLocation" x="141.5" y="1322.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gzA-dC-E8l">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2wm-3q-Vw8" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="LandingPageController" automaticallyAdjustsScrollViewInsets="NO" id="2wm-3q-Vw8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="20f-3m-1hC"/>
+                    <navigationItem key="navigationItem" id="20f-3m-1hC">
+                        <barButtonItem key="leftBarButtonItem" image="hamberger" id="xIj-ki-CiQ"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="3fC-7P-eMj">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="52L-NF-UWh" kind="relationship" relationship="viewControllers" id="V5h-bB-moa"/>
-                        <segue destination="Q4u-yQ-dAu" kind="relationship" relationship="viewControllers" id="LyT-pq-PxA"/>
-                        <segue destination="QM7-po-LLm" kind="relationship" relationship="viewControllers" id="WJy-pc-iC9"/>
-                        <segue destination="xlF-2E-qFX" kind="relationship" relationship="viewControllers" id="3j8-ra-iQR"/>
+                        <segue destination="Qon-Yp-eab" kind="relationship" relationship="viewControllers" id="V5h-bB-moa"/>
+                        <segue destination="Abb-rd-IzB" kind="relationship" relationship="viewControllers" id="LyT-pq-PxA"/>
+                        <segue destination="leg-pf-7JW" kind="relationship" relationship="viewControllers" id="WJy-pc-iC9"/>
+                        <segue destination="k81-ou-7J1" kind="relationship" relationship="viewControllers" id="3j8-ra-iQR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RbO-Ku-SYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -616,7 +658,7 @@
         <!--แผนที่-->
         <scene sceneID="IWI-kC-gse">
             <objects>
-                <viewController id="Q4u-yQ-dAu" sceneMemberID="viewController">
+                <viewController id="Q4u-yQ-dAu" customClass="MapViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NpW-0q-Sh5"/>
                         <viewControllerLayoutGuide type="bottom" id="Idg-Sp-TMz"/>
@@ -626,18 +668,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="แผนที่" image="map" id="QGF-Lk-Y3o"/>
-                    <navigationItem key="navigationItem" title="แผนที่" id="ecU-cO-8uS"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="แผนที่" id="ecU-cO-8uS">
+                        <barButtonItem key="leftBarButtonItem" image="hamberger" id="cwd-xp-oWz">
+                            <connections>
+                                <action selector="hamburgerButtonAction:" destination="Q4u-yQ-dAu" id="hAW-fR-hTH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgr-7h-YW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739.5" y="1322.5"/>
+            <point key="canvasLocation" x="2913.5" y="1322.5"/>
         </scene>
         <!--สิทธิพิเศษ-->
         <scene sceneID="U12-mW-WdC">
             <objects>
-                <viewController id="QM7-po-LLm" sceneMemberID="viewController">
+                <viewController id="QM7-po-LLm" customClass="PromotionViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QQx-Ca-JSE"/>
                         <viewControllerLayoutGuide type="bottom" id="JXk-q7-MuL"/>
@@ -647,16 +696,100 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="สิทธิพิเศษ" image="offer" id="hHD-nw-Vib"/>
-                    <navigationItem key="navigationItem" title="สิทธิพิเศษ" id="tgr-4x-aex"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="สิทธิพิเศษ" id="tgr-4x-aex">
+                        <barButtonItem key="leftBarButtonItem" image="hamberger" id="sj0-Cm-j4k">
+                            <connections>
+                                <action selector="hamburgerButtonAction:" destination="QM7-po-LLm" id="17h-jr-SCP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yre-kh-LHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2271.5" y="1327.5"/>
+            <point key="canvasLocation" x="2326.5" y="2137.5"/>
+        </scene>
+        <!--สินค้า-->
+        <scene sceneID="NJw-zM-NKu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qon-Yp-eab" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="สินค้า" image="product" id="z74-c9-Yrk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FdY-Q3-4pE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="52L-NF-UWh" kind="relationship" relationship="rootViewController" id="5pn-Ha-P47"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t81-E9-cfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204.5" y="1316.5"/>
+        </scene>
+        <!--QR-->
+        <scene sceneID="O5f-de-k59">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k81-ou-7J1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="QR" image="qr" id="mng-2w-Hca"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PRH-AP-mew">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xlF-2E-qFX" kind="relationship" relationship="rootViewController" id="dRV-Nr-UgN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X8A-A2-i35" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676.5" y="2137.5"/>
+        </scene>
+        <!--แผนที่-->
+        <scene sceneID="xcX-De-mTu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Abb-rd-IzB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="แผนที่" image="map" id="QGF-Lk-Y3o"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rNU-kE-LZU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q4u-yQ-dAu" kind="relationship" relationship="rootViewController" id="ub0-L3-gU4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOI-CO-v4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2326.5" y="1322.5"/>
+        </scene>
+        <!--สิทธิพิเศษ-->
+        <scene sceneID="dMy-Xs-AdE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="leg-pf-7JW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="สิทธิพิเศษ" image="offer" id="hHD-nw-Vib"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8CX-Wj-CEu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QM7-po-LLm" kind="relationship" relationship="rootViewController" id="vYZ-va-cDP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3D-vK-4zy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791.5" y="2137.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hamberger" width="30" height="21"/>
         <image name="map" width="21" height="21"/>
         <image name="money-bag" width="170" height="170"/>
         <image name="offer" width="21" height="21"/>

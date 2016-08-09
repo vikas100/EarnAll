@@ -23,7 +23,7 @@ class LogInViewController: BaseViewController {
     
     @IBAction func sendActionButton(sender: AnyObject) {
         
-        let controller =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LandingPageNavigationController")
+        let controller =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LandingPageController")
         self.presentViewController(controller, animated: true, completion: {
             AppDelegate.shareWindow!.rootViewController =  controller
         })

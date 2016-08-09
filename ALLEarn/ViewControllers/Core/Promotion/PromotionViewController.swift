@@ -1,5 +1,5 @@
 //
-//  OTPViewController.swift
+//  PromotionViewController.swift
 //  ALLEarn
 //
 //  Created by gophermosaic on 8/9/2559 BE.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OTPViewController: BaseViewController {
+class PromotionViewController: BaseTabViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +21,10 @@ class OTPViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func sendActionButton(sender: AnyObject) {
-        let controller =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LandingPageController")
-        self.presentViewController(controller, animated: true, completion: {
-            AppDelegate.shareWindow!.rootViewController =  controller
-        })
+    @IBAction func hamburgerButtonAction(sender: AnyObject) {
+        toggleLeftHamburger()
     }
+
     /*
     // MARK: - Navigation
 

@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import MMDrawerController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     static var shareWindow  : UIWindow?
+    static var drawer : MMDrawerController?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         AppDelegate.shareWindow = window
+        
+        
+        if (true)
+        {
+            self.window!.rootViewController =  AppDelegate.initDrawerMenu("LandingPageController")
+        }
+        else
+        {
+            self.window!.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FirstPageViewController")
+        }
         
         return true
     }
@@ -40,6 +52,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    
+    
+    static func initDrawerMenu(viewControllerName : String) ->MMDrawerController{
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let leftView = storyboard.instantiateViewControllerWithIdentifier("LeftMenu")
+        let main = storyboard.instantiateViewControllerWithIdentifier(viewControllerName)
+        let controller = MMDrawerController(centerViewController: main, leftDrawerViewController:leftView)
+        
+        controller.showsShadow = true
+        controller.maximumRightDrawerWidth = 260
+        controller.openDrawerGestureModeMask = MMOpenDrawerGestureMode.BezelPanningCenterView
+        controller.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.All
+        AppDelegate.drawer = controller
+        return controller
     }
     
     
