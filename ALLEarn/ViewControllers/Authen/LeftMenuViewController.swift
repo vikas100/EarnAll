@@ -17,5 +17,7 @@ class LeftMenuViewController: UIViewController {
     }
 
     @IBAction func logoutButtonAction(sender: AnyObject) {
+        SystemManager.removeLogin()
+         AppDelegate.shareWindow!.rootViewController = self.storyboard!.instantiateViewControllerWithIdentifier("FirstPageViewController")
     }
 }

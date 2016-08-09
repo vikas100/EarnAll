@@ -22,8 +22,8 @@ class LogInViewController: BaseViewController {
     }
     
     @IBAction func sendActionButton(sender: AnyObject) {
-        
-        let controller =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LandingPageController")
+        SystemManager.saveLogin()
+        let controller =  AppDelegate.initDrawerMenu()
         self.presentViewController(controller, animated: true, completion: {
             AppDelegate.shareWindow!.rootViewController =  controller
         })

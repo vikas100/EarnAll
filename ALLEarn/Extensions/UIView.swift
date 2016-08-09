@@ -71,3 +71,9 @@ extension UIDevice {
     
 }
 
+extension UIViewController {
+    func toggleLeftHamburger(){
+        AppDelegate.drawer?.toggleDrawerSide(.Left, animated: true, completion: nil)
+    }
+}
+

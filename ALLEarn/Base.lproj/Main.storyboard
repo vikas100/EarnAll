@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--First Page View Controller-->
@@ -142,7 +143,7 @@
         <!--สินค้า-->
         <scene sceneID="g7g-Jn-O7a">
             <objects>
-                <viewController id="52L-NF-UWh" customClass="ProductViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="52L-NF-UWh" customClass="ProductViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6It-ok-kvE"/>
                         <viewControllerLayoutGuide type="bottom" id="riF-7s-7qn"/>
@@ -153,11 +154,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="สินค้า" id="QVo-kC-ppS">
-                        <barButtonItem key="leftBarButtonItem" image="hamberger" id="Mdc-xU-pvB">
+                        <barButtonItem key="leftBarButtonItem" image="bars" id="Mdc-xU-pvB">
                             <connections>
                                 <action selector="hamburgerButtonAction:" destination="52L-NF-UWh" id="xQI-zh-a9D"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="search" id="yuP-gh-cLR"/>
+                            <barButtonItem image="menu" id="0Lj-02-OzR"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCg-8b-QOE" sceneMemberID="firstResponder"/>
@@ -179,7 +184,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="QR" id="X2c-8W-Ocz">
-                        <barButtonItem key="leftBarButtonItem" image="hamberger" id="CGu-FE-MPC">
+                        <barButtonItem key="leftBarButtonItem" image="bars" id="CGu-FE-MPC">
                             <connections>
                                 <action selector="hamburgerButtonAction:" destination="xlF-2E-qFX" id="9Vj-sf-XPR"/>
                             </connections>
@@ -191,6 +196,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgW-O8-lBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1204.5" y="2137.5"/>
+        </scene>
+        <!--Product Filter Page View Controller-->
+        <scene sceneID="qUt-bB-0wV">
+            <objects>
+                <viewController storyboardIdentifier="ProductFilterPageViewController" id="VIt-B0-f8y" customClass="ProductFilterPageViewController" customModule="ALLEarn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LAX-It-2fJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Ua-e7-AZP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ROF-Op-6Ue">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6IR-L6-h3L">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductFilterTAbleViewCell" rowHeight="120" id="3j4-eG-8dm">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3j4-eG-8dm" id="ut0-zU-Iyr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ที่กินเกาะสมุย - 10 ร้านอาหารแนะนำ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r38-BK-7yq">
+                                                    <rect key="frame" x="110" y="10" width="254" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="DuU-lC-DdX">
+                                                    <rect key="frame" x="10" y="8" width="90" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="SHy-Sf-PDn"/>
+                                                        <constraint firstAttribute="width" constant="90" id="w2C-xN-jgG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1j-uV-H0D">
+                                                    <rect key="frame" x="110" y="46" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="v1j-uV-H0D" firstAttribute="leading" secondItem="DuU-lC-DdX" secondAttribute="trailing" constant="10" id="Jys-PK-N5q"/>
+                                                <constraint firstItem="r38-BK-7yq" firstAttribute="leading" secondItem="DuU-lC-DdX" secondAttribute="trailing" constant="10" id="K2s-He-Smq"/>
+                                                <constraint firstItem="DuU-lC-DdX" firstAttribute="top" secondItem="ut0-zU-Iyr" secondAttribute="top" constant="8" id="KG9-Y9-h7h"/>
+                                                <constraint firstItem="r38-BK-7yq" firstAttribute="top" secondItem="ut0-zU-Iyr" secondAttribute="top" constant="10" id="T7z-IH-pkj"/>
+                                                <constraint firstItem="DuU-lC-DdX" firstAttribute="leading" secondItem="ut0-zU-Iyr" secondAttribute="leading" constant="10" id="Vch-nd-KYm"/>
+                                                <constraint firstItem="v1j-uV-H0D" firstAttribute="top" secondItem="r38-BK-7yq" secondAttribute="bottom" constant="15" id="am0-0M-Rcn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VIt-B0-f8y" id="cV1-4g-YCm"/>
+                                    <outlet property="delegate" destination="VIt-B0-f8y" id="3Uh-QN-I9l"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Ua-e7-AZP" firstAttribute="top" secondItem="6IR-L6-h3L" secondAttribute="bottom" id="0Kc-Bx-XE1"/>
+                            <constraint firstAttribute="trailing" secondItem="6IR-L6-h3L" secondAttribute="trailing" id="MEw-AL-r42"/>
+                            <constraint firstItem="6IR-L6-h3L" firstAttribute="leading" secondItem="ROF-Op-6Ue" secondAttribute="leading" id="l28-Bm-Ecd"/>
+                            <constraint firstItem="6IR-L6-h3L" firstAttribute="top" secondItem="LAX-It-2fJ" secondAttribute="bottom" id="nIh-vc-dFi"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w96-Nw-2LB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204.5" y="2986.5"/>
         </scene>
         <!--เข้าสู่ระบบ-->
         <scene sceneID="fko-97-F31">
@@ -598,7 +677,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hx8-ih-nnw">
-                                <rect key="frame" x="20" y="160" width="335" height="40"/>
+                                <rect key="frame" x="20" y="314" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9n4-gV-NIl"/>
                                 </constraints>
@@ -621,9 +700,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hx8-ih-nnw" firstAttribute="leading" secondItem="wNe-do-rcG" secondAttribute="leading" constant="20" id="Ia8-So-k8Q"/>
+                            <constraint firstItem="hx8-ih-nnw" firstAttribute="centerY" secondItem="wNe-do-rcG" secondAttribute="centerY" id="PsE-KL-oRH"/>
                             <constraint firstItem="hx8-ih-nnw" firstAttribute="top" secondItem="yMK-dI-X8B" secondAttribute="bottom" constant="140" id="TtE-XA-QDa"/>
                             <constraint firstAttribute="trailing" secondItem="hx8-ih-nnw" secondAttribute="trailing" constant="20" id="qBa-EB-oXo"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TtE-XA-QDa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -670,7 +755,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="แผนที่" id="ecU-cO-8uS">
-                        <barButtonItem key="leftBarButtonItem" image="hamberger" id="cwd-xp-oWz">
+                        <barButtonItem key="leftBarButtonItem" image="bars" id="cwd-xp-oWz">
                             <connections>
                                 <action selector="hamburgerButtonAction:" destination="Q4u-yQ-dAu" id="hAW-fR-hTH"/>
                             </connections>
@@ -698,7 +783,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="สิทธิพิเศษ" id="tgr-4x-aex">
-                        <barButtonItem key="leftBarButtonItem" image="hamberger" id="sj0-Cm-j4k">
+                        <barButtonItem key="leftBarButtonItem" image="bars" id="sj0-Cm-j4k">
                             <connections>
                                 <action selector="hamburgerButtonAction:" destination="QM7-po-LLm" id="17h-jr-SCP"/>
                             </connections>
@@ -789,11 +874,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bars" width="21" height="21"/>
         <image name="hamberger" width="30" height="21"/>
         <image name="map" width="21" height="21"/>
+        <image name="menu" width="21" height="21"/>
         <image name="money-bag" width="170" height="170"/>
         <image name="offer" width="21" height="21"/>
         <image name="product" width="21" height="21"/>
         <image name="qr" width="21" height="21"/>
+        <image name="search" width="21" height="21"/>
+        <image name="test" width="200" height="133"/>
     </resources>
 </document>

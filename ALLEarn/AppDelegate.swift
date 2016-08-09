@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.shareWindow = window
         
         
-        if (true)
+        if (SystemManager.checkLogin())
         {
-            self.window!.rootViewController =  AppDelegate.initDrawerMenu("LandingPageController")
+            self.window!.rootViewController =  AppDelegate.initDrawerMenu()
         }
         else
         {
@@ -56,10 +56,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
-    static func initDrawerMenu(viewControllerName : String) ->MMDrawerController{
+    static func initDrawerMenu() ->MMDrawerController{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let leftView = storyboard.instantiateViewControllerWithIdentifier("LeftMenu")
-        let main = storyboard.instantiateViewControllerWithIdentifier(viewControllerName)
+        let main = storyboard.instantiateViewControllerWithIdentifier("LandingPageController")
         let controller = MMDrawerController(centerViewController: main, leftDrawerViewController:leftView)
         
         controller.showsShadow = true

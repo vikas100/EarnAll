@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PromotionViewController: BaseTabViewController {
+class PromotionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
