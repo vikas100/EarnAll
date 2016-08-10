@@ -13,22 +13,30 @@ class ProductViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         settingButtonBarPagerTab()
         super.viewDidLoad()
-        
+        setFontTitleBar()
     }
+        
     
     func settingButtonBarPagerTab(){
+        
         buttonBarView.frame.origin.y = 64
-        settings.style.buttonBarBackgroundColor = .whiteColor()
-        settings.style.buttonBarItemBackgroundColor = .whiteColor()
-        settings.style.selectedBarBackgroundColor = UIColor.blueColor()
-        settings.style.buttonBarItemFont = .boldSystemFontOfSize(14)
+        let hilightColor  = ColorManager.getDarkGreen()
+        let backgroudColor  =  ColorManager.getGreen()
+        
+        
+        //     UITabBar.appearance().ba
+        settings.style.buttonBarBackgroundColor = backgroudColor
+        settings.style.buttonBarItemBackgroundColor = backgroudColor
+        settings.style.selectedBarBackgroundColor = .whiteColor()
+        settings.style.buttonBarItemFont =  UIFont(name: "SukhumvitSet-SemiBold", size: 14)!//.boldSystemFontOfSize(14)
+        //        settings.style.co
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarMinimumLineSpacing = 0
-        settings.style.buttonBarItemTitleColor = .blackColor()
+        settings.style.buttonBarItemTitleColor = UIColor.whiteColor()
         settings.style.buttonBarItemsShouldFillAvailiableWidth = true
         settings.style.buttonBarLeftContentInset = 0
         settings.style.buttonBarRightContentInset = 0
-//        settings.style.buttonBarHeight = 20
+        //        settings.style.buttonBarHeight = 20
         
         buttonBarView.frame = CGRect(x: 0, y: 64, width: buttonBarView.frame.width, height: 35)
         
@@ -37,20 +45,23 @@ class ProductViewController: ButtonBarPagerTabStripViewController {
         
         changeCurrentIndexProgressive = {  (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
-            oldCell?.label.textColor = .blackColor()
-            newCell?.label.textColor = .blueColor()
+            oldCell?.label.textColor = hilightColor
+            newCell?.label.textColor = .whiteColor()
             
         }
     }
     
     override func viewControllersForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let f1 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
+        let filter1 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
+        filter1.itemInfo = "วันที่"
         
-        f1.itemInfo = "วันที่"
-
-        let filter2 = ProductFilterPageViewController(itemInfo: "คะแนนมากสุด")
-        let filter3 = ProductFilterPageViewController(itemInfo: "ยอดนิยม")
-        return [f1,filter2,filter3]
+        let filter2 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
+        filter2.itemInfo = "คะแนนมากสุด"
+        
+        let filter3 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
+        filter3.itemInfo = "ยอดนิยม"
+        
+        return [filter1,filter2,filter3]
     }
     
     @IBAction func hamburgerButtonAction(sender: AnyObject) {

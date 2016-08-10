@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         AppDelegate.shareWindow = window
-        
+        SystemManager.initUI()
         
         if (SystemManager.checkLogin())
         {

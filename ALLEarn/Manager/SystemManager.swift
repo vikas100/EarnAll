@@ -22,4 +22,11 @@ class SystemManager {
         NSUserDefaults().setBool(false, forKey: "login")
     }
     
+    static func initUI(){
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSFontAttributeName: UIFont(name:"SukhumvitSet-Bold", size:11)!,
+                NSForegroundColorAttributeName: ColorManager.getDarkGreen()],
+            forState: .Normal)
+    }
 }

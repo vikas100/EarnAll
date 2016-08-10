@@ -9,25 +9,10 @@
 import UIKit
 import XLPagerTabStrip
 
-class ProductFilterPageViewController: UIViewController, IndicatorInfoProvider, UITableViewDelegate, UITableViewDataSource {
-    
-    var itemInfo: IndicatorInfo = "View"
-    
-    init(itemInfo: IndicatorInfo) {
-        self.itemInfo = itemInfo
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    func indicatorInfoForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,13 +24,17 @@ class ProductFilterPageViewController: UIViewController, IndicatorInfoProvider, 
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ProductFilterTAbleViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ProductFilterTAbleViewCell", forIndexPath: indexPath) as! ProductFilterUITableViewCell
+//        cell.layer.shadowColor = UIColor.grayColor().CGColor
+//        cell.layer.shadowOffset =  CGSizeMake(0.0,1.0)
+//        cell.layer.shadowRadius = 5.0
+//        cell.layer.shadowOpacity = 0.5
         
         return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 120
+        return 265
     }
     
 }
