@@ -25,8 +25,12 @@ class SystemManager {
     static func initUI(){
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         UITabBarItem.appearance().setTitleTextAttributes(
-            [NSFontAttributeName: UIFont(name:"SukhumvitSet-Bold", size:11)!,
-                NSForegroundColorAttributeName: ColorManager.getDarkGreen()],
+            [NSFontAttributeName: UIFont(name:"SukhumvitSet-Medium", size:11)!,
+                NSForegroundColorAttributeName: UIColor.lightGrayColor()],
             forState: .Normal)
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSFontAttributeName: UIFont(name:"SukhumvitSet-Medium", size:11)!,
+                NSForegroundColorAttributeName: ColorManager.getGreen()],
+            forState: .Selected)
     }
 }

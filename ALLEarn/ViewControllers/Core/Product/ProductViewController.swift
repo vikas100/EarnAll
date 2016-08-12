@@ -61,7 +61,11 @@ class ProductViewController: ButtonBarPagerTabStripViewController {
         let filter3 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
         filter3.itemInfo = "ยอดนิยม"
         
-        return [filter1,filter2,filter3]
+        let filter4 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
+        filter4.itemInfo = "ระยะทาง"
+
+        
+        return [filter1,filter2,filter3,filter4]
     }
     
     @IBAction func hamburgerButtonAction(sender: AnyObject) {
