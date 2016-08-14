@@ -26,11 +26,11 @@ class SystemManager {
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         UITabBarItem.appearance().setTitleTextAttributes(
             [NSFontAttributeName: UIFont(name:"SukhumvitSet-Medium", size:11)!,
-                NSForegroundColorAttributeName: UIColor.lightGrayColor()],
+                NSForegroundColorAttributeName: ColorManager.getGrayText()],
             forState: .Normal)
         UITabBarItem.appearance().setTitleTextAttributes(
             [NSFontAttributeName: UIFont(name:"SukhumvitSet-Medium", size:11)!,
-                NSForegroundColorAttributeName: ColorManager.getGreen()],
+                NSForegroundColorAttributeName: ColorManager.getBlueTextPastel()],
             forState: .Selected)
     }
 }

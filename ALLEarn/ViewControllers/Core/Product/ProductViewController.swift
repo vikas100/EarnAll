@@ -15,13 +15,12 @@ class ProductViewController: ButtonBarPagerTabStripViewController {
         super.viewDidLoad()
         setFontTitleBar()
     }
-        
     
     func settingButtonBarPagerTab(){
         
         buttonBarView.frame.origin.y = 64
         let hilightColor  = ColorManager.getDarkGreen()
-        let backgroudColor  =  ColorManager.getGreen()
+        let backgroudColor  =  ColorManager.getBluePastel()
         
         
         //     UITabBar.appearance().ba
@@ -41,7 +40,7 @@ class ProductViewController: ButtonBarPagerTabStripViewController {
         buttonBarView.frame = CGRect(x: 0, y: 64, width: buttonBarView.frame.width, height: 35)
         
         let treashow = 64 + buttonBarView.frame.height
-        containerView.frame = CGRect(x: 0, y: treashow, width: containerView.frame.width, height: containerView.frame.height - treashow)
+        containerView.frame = CGRect(x: 0, y: treashow, width: containerView.frame.width, height: (containerView.frame.height - treashow ) + 64)
         
         changeCurrentIndexProgressive = {  (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
@@ -63,22 +62,57 @@ class ProductViewController: ButtonBarPagerTabStripViewController {
         
         let filter4 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
         filter4.itemInfo = "ระยะทาง"
-
         
         return [filter1,filter2,filter3,filter4]
     }
+    
+    
+    @IBAction func categoriesButtonAction(sender: AnyObject) {
+        let dropdownView = storyboard!.instantiateViewControllerWithIdentifier("ProductDropDownViewController") as! UINavigationController
+        
+        
+        presentViewController(dropdownView, animated: true, completion: nil)
+    }
+    
+    
     
     @IBAction func hamburgerButtonAction(sender: AnyObject) {
         toggleLeftHamburger()
     }
     
+    //
+    //    func toggleDropDown(){
+    //        let duration = 0.24
+    //        if dopdownView.hidden {
+    //            UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseIn, animations: {
+    //                self.dopdownView.hidden =  !self.dopdownView.hidden
+    //                self.dopdownView.layer.zPosition = 1
+    //                self.dopdownView.alpha = 1
+    //                }, completion: {(a) in
+    //            })
+    //
+    //
+    //        }
+    //        else{
+    //            UIView.animateWithDuration(duration, delay:0, options: .CurveEaseIn, animations: {
+    //                self.dopdownView.alpha = 0
+    //                }, completion: { (r) in
+    //                    self.dopdownView.hidden =  !self.dopdownView.hidden
+    //                    self.dopdownView.layer.zPosition = 0
+    //                }
+    //            )
+    //        }
+    //    }
+    
+    
+    
     /*
-     // MARK: - Navigation
+     MARK: - Navigation
      
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+     Get the new view controller using segue.destinationViewController.
+     Pass the selected object to the new view controller.
      }
      */
     

@@ -21,7 +21,7 @@ class QRViewController : ButtonBarPagerTabStripViewController {
         
         buttonBarView.frame.origin.y = 64
         let hilightColor  = ColorManager.getDarkGreen()
-        let backgroudColor  =  ColorManager.getGreen()
+        let backgroudColor  =  ColorManager.getBluePastel()
         
         
         //     UITabBar.appearance().ba

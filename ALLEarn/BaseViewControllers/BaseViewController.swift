@@ -27,6 +27,10 @@ class BaseViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    func disableTransparantNavigationBar(){
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     func initLanguage(){
         
     }
@@ -57,7 +61,7 @@ class BaseViewController: UIViewController {
     }
     
     func setNavigation(){
-        setNavigationTransparent()
+//        setNavigationTransparent()
         //        setFontTitleBar()
         self.navigationItem.hidesBackButton = true
         self.navigationController?.interactivePopGestureRecognizer!.enabled = true
