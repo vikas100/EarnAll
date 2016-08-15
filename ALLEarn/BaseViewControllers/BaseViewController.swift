@@ -14,6 +14,8 @@ import UIKit
 class BaseViewController: UIViewController {
     var component: [UIView] = []
     
+   var titleColor = UIColor.whiteColor()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigation()
@@ -61,13 +63,13 @@ class BaseViewController: UIViewController {
     }
     
     func setNavigation(){
-//        setNavigationTransparent()
-        //        setFontTitleBar()
+        //        setNavigationTransparent()
+        setFontTitleBar()
         self.navigationItem.hidesBackButton = true
         self.navigationController?.interactivePopGestureRecognizer!.enabled = true
         self.navigationController?.interactivePopGestureRecognizer!.delegate = nil
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back_icon"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(BaseViewController.leftBarButtonAction))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_icon"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(BaseViewController.rightBarButtonAction))
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_icon"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(BaseViewController.rightBarButtonAction))
         //        self.navigationItem.rightBarButtonItem?.tintColor = ColorManager.getGrayBack()
         //        self.navigationItem.leftBarButtonItem?.tintColor = ColorManager.getGrayBack()
     }
@@ -105,20 +107,14 @@ class BaseViewController: UIViewController {
     //        UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
     //    }
     //
-    //    private func setFontTitleBar(){
-    //        let font : UIFont?
-    //        if( LanguageManager.getInstance().getLanguage() == Language.EN)
-    //        {
-    //            font = UIFont(name: "SweetSans-Bold", size: 18)
-    //        }
-    //        else{
-    //            font = UIFont(name: "PSLSirintrExtraPro", size: 28)
-    //        }
-    //
-    //        let point : CGFloat = 58/255
-    //        self.navigationController?.navigationBar.titleTextAttributes =
-    //            [NSForegroundColorAttributeName: UIColor(red: point, green: point, blue: point, alpha: 1),NSFontAttributeName: font!]
-    //    }
+    
+    override func setFontTitleBar(){
+        let font : UIFont?
+        font = UIFont(name: "SukhumvitSet-SemiBold", size: 18)
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSForegroundColorAttributeName: titleColor,NSFontAttributeName: font!]
+    }
+    
     //
     private func setNavigationTransparent(){
         let navigationBar = navigationController!.navigationBar

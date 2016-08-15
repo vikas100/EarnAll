@@ -8,19 +8,13 @@
 
 import UIKit
 
-class ProductDropDownViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate {
+class ProductDropDownViewController: BaseViewController , UICollectionViewDataSource, UICollectionViewDelegate {
     
     override func viewDidLoad() {
+        titleColor = UIColor.blackColor()
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        disableLeftBarButton()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     // MARK: - For Dropdown
     
@@ -36,7 +30,7 @@ class ProductDropDownViewController: UIViewController , UICollectionViewDataSour
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    let texts = ["ความงาม", "อาหาร","รถยนต์","เครื่องแต่งกาย","ที่พักอาศัย", "อาหาร","รถยนต์","เครื่องแต่งกาย"]
+    let texts = ["ทั้งหมด","ความงาม", "อาหาร","รถยนต์","เครื่องแต่งกาย","ที่พักอาศัย", "อาหาร","รถยนต์","เครื่องแต่งกาย"]
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ProductDropDownViewCell", forIndexPath: indexPath) as! ProductDropDownCollectionViewCell
         cell.titleLable.text = texts[indexPath.row]

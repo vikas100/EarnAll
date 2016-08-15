@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import HCSStarRatingView
 
 class ProductFilterUITableViewCell: UITableViewCell {
+    @IBOutlet weak var headerLabel: UILabelBold!
+    @IBOutlet weak var dateLabel: UILabelLight!
+    @IBOutlet weak var viewNumberLabel: UILabelBold!
+    @IBOutlet weak var usedNumberLabel: UILabelBold!
 
+    @IBOutlet weak var donateNumberLabel: UILabelBold!
+    @IBOutlet weak var categoryImageView: UIImageView!
+    @IBOutlet weak var ratingStarRatingView: HCSStarRatingView!
+    @IBOutlet weak var imageStoreImageView: UIImageView!
+    @IBOutlet weak var imageContentImageView: UIImageView!
     @IBOutlet weak var rootView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()

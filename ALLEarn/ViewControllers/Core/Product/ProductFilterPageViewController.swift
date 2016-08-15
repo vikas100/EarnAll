@@ -12,28 +12,16 @@ import XLPagerTabStrip
 class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableTableView: UITableView!
     
-    var itemHeight : CGFloat  = 355//335
+    var itemHeight : CGFloat  = 355
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController!.tabBarController?.tabBar.translucent = true
-
-//        if Utils.checkSize() == .iPhone5 || Utils.checkSize() == .iPhone4 {
-//            itemHeight = 355
-//        }
         tableTableView.contentInset =  UIEdgeInsetsMake(0, 0, 69, 0)
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController!.tabBarController?.tabBar.translucent = true
-
+        
     }
-//   
-//    override func viewWillAppear(animated: Bool) {
-//        UIView.animateWithDuration(3, delay: 0, options: .CurveEaseIn, animations: {
-//            self.tabBarController?.tabBar.layer.zPosition = 0
-//            }, completion: nil)
-//        
-//    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -45,10 +33,29 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ProductFilterTAbleViewCell", forIndexPath: indexPath) as! ProductFilterUITableViewCell
-        //        cell.layer.shadowColor = UIColor.grayColor().CGColor
-        //        cell.layer.shadowOffset =  CGSizeMake(0.0,1.0)
-        //        cell.layer.shadowRadius = 5.0
-        //        cell.layer.shadowOpacity = 0.5
+        let index = indexPath.row
+        if index % 2 == 0 {
+            cell.imageContentImageView.image = UIImage(named: "test")
+            cell.imageStoreImageView.image = UIImage(named: "test33")
+            cell.categoryImageView.image = UIImage(named: "food2")
+            cell.ratingStarRatingView.value = 5
+            cell.headerLabel.text = "อันยอง~ Korean Dessert Cafe สไตล์เกาหลีของจริง"
+            cell.dateLabel.text = "ภายใน " + "19/8/59"
+            cell.viewNumberLabel.text = "789 วิว"
+            cell.usedNumberLabel.text = "777 ครั้ง"
+            cell.donateNumberLabel.text = "1,200 บาท"
+        }
+        else{
+            cell.imageContentImageView.image = UIImage(named: "test33")
+            cell.imageStoreImageView.image = UIImage(named: "test")
+            cell.categoryImageView.image = UIImage(named: "growth")
+            cell.ratingStarRatingView.value = 2.5
+            cell.headerLabel.text = "อันยอง~ Korean Dessert Cafe สไตล์เกาหลีของจริง"
+            cell.dateLabel.text = "ภายใน " + "19/8/59"
+            cell.viewNumberLabel.text = "99 วิว"
+            cell.usedNumberLabel.text = "98 ครั้ง"
+            cell.donateNumberLabel.text = "512.78 บาท"
+        }
         
         return cell
     }
@@ -58,13 +65,10 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//         self.hidesBottomBarWhenPushed = true
         performSegueWithIdentifier("productToDetailPage", sender: nil)
-//         self.hidesBottomBarWhenPushed = false
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//     segue.destinationViewController.hidesBottomBarWhenPushed = true
     }
     
 }

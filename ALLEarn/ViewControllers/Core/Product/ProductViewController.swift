@@ -19,8 +19,8 @@ class ProductViewController: ButtonBarPagerTabStripViewController {
     func settingButtonBarPagerTab(){
         
         buttonBarView.frame.origin.y = 64
-        let hilightColor  = ColorManager.getDarkGreen()
-        let backgroudColor  =  ColorManager.getBluePastel()
+        let hilightColor  = UIColor.blackColor() //ColorManager.getDarkGreen()
+        let backgroudColor  = UIColor.clearColor()// ColorManager.getBluePastel()
         
         
         //     UITabBar.appearance().ba
@@ -39,7 +39,7 @@ class ProductViewController: ButtonBarPagerTabStripViewController {
         
         buttonBarView.frame = CGRect(x: 0, y: 64, width: buttonBarView.frame.width, height: 35)
         
-        let treashow = 64 + buttonBarView.frame.height
+        let treashow = 64 + buttonBarView.frame.height + 1
         containerView.frame = CGRect(x: 0, y: treashow, width: containerView.frame.width, height: (containerView.frame.height - treashow ) + 64)
         
         changeCurrentIndexProgressive = {  (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
