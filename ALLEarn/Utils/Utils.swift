@@ -36,5 +36,23 @@ class Utils: NSObject {
             
         }
     }
+    
+    static  func convertNumberToStringCurrency(number:Double)->String {
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        let result = numberFormatter.stringFromNumber(number)!
+        var stringResult = ""
+        if( result.containsString("THB"))
+        {
+            let index = result.startIndex.advancedBy(3)
+            stringResult = result.substringFromIndex(index)
+        }
+        else {
+            let index = result.startIndex.advancedBy(1)
+            stringResult = result.substringFromIndex(index)
+        }
+        let value = stringResult.componentsSeparatedByString(".")
+        return value[0]
+    }
 }
 

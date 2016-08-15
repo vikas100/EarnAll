@@ -6,4 +6,7 @@ target ‘ALLEarn’ do
     pod 'Realm', '~> 1.0’
     pod 'XLPagerTabStrip', '~> 5.0'
     pod 'HCSStarRatingView', '~> 1.4'
+    pod 'Alamofire', '~> 3.4’
+    pod 'Kingfisher', '~> 1.9'
+    pod 'KVNProgress', '~> 2.3'
 end

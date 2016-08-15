@@ -84,13 +84,19 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-ALLEarn/Alamofire.framework"
   install_framework "Pods-ALLEarn/HCSStarRatingView.framework"
+  install_framework "Pods-ALLEarn/KVNProgress.framework"
+  install_framework "Pods-ALLEarn/Kingfisher.framework"
   install_framework "Pods-ALLEarn/MMDrawerController.framework"
   install_framework "Pods-ALLEarn/Realm.framework"
   install_framework "Pods-ALLEarn/XLPagerTabStrip.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-ALLEarn/Alamofire.framework"
   install_framework "Pods-ALLEarn/HCSStarRatingView.framework"
+  install_framework "Pods-ALLEarn/KVNProgress.framework"
+  install_framework "Pods-ALLEarn/Kingfisher.framework"
   install_framework "Pods-ALLEarn/MMDrawerController.framework"
   install_framework "Pods-ALLEarn/Realm.framework"
   install_framework "Pods-ALLEarn/XLPagerTabStrip.framework"

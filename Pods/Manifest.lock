@@ -1,5 +1,8 @@
 PODS:
+  - Alamofire (3.4.1)
   - HCSStarRatingView (1.4.5)
+  - Kingfisher (1.9.3)
+  - KVNProgress (2.3)
   - MMDrawerController (0.6.0):
     - MMDrawerController/Core (= 0.6.0)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
@@ -18,13 +21,19 @@ PODS:
   - XLPagerTabStrip (5.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.4)
   - HCSStarRatingView (~> 1.4)
+  - Kingfisher (~> 1.9)
+  - KVNProgress (~> 2.3)
   - MMDrawerController (~> 0.6.0)
   - Realm (~> 1.0)
   - XLPagerTabStrip (~> 5.0)
 
 SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   HCSStarRatingView: bff3f89314d3b5013ce826ea11897d3129ff6b8c
+  Kingfisher: 9e37d2a78a082dc123bfe8a16de65de85518daae
+  KVNProgress: d0459bfa4dca0379cdba5c038326ea34e9fc2df9
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
   XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965

@@ -8,15 +8,30 @@
 
 import UIKit
 import XLPagerTabStrip
-
+import Kingfisher
+import KVNProgress
 class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableTableView: UITableView!
+   
+    var listData = [ProductModel]()
     
-    var itemHeight : CGFloat  = 355
+    var itemHeight : CGFloat  = 325
     override func viewDidLoad() {
         super.viewDidLoad()
         tableTableView.contentInset =  UIEdgeInsetsMake(0, 0, 69, 0)
+        initData()
     }
+    
+    
+    func initData(){
+        KVNProgress.show()
+        Service.getInstance().get("products", type: ProductModel.self) { (result, data, errorMessage) in
+            self.listData = data!
+            self.tableTableView.reloadData()
+            KVNProgress.dismiss()
+        }
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController!.tabBarController?.tabBar.translucent = true
@@ -24,7 +39,7 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return listData.count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -34,29 +49,18 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ProductFilterTAbleViewCell", forIndexPath: indexPath) as! ProductFilterUITableViewCell
         let index = indexPath.row
-        if index % 2 == 0 {
-            cell.imageContentImageView.image = UIImage(named: "test")
+        let data = listData[index]
+      
+            cell.imageContentImageView.kf_setImageWithURL(NSURL(string: data.image.thumb)!, placeholderImage: UIImage(named: "load-icon"))
+//            cell.imageContentImageView.image = UIImage(named: "test")
             cell.imageStoreImageView.image = UIImage(named: "test33")
             cell.categoryImageView.image = UIImage(named: "food2")
-            cell.ratingStarRatingView.value = 5
-            cell.headerLabel.text = "อันยอง~ Korean Dessert Cafe สไตล์เกาหลีของจริง"
+            cell.ratingStarRatingView.value = data.statistic.rating
+            cell.headerLabel.text = data.title
             cell.dateLabel.text = "ภายใน " + "19/8/59"
-            cell.viewNumberLabel.text = "789 วิว"
-            cell.usedNumberLabel.text = "777 ครั้ง"
-            cell.donateNumberLabel.text = "1,200 บาท"
-        }
-        else{
-            cell.imageContentImageView.image = UIImage(named: "test33")
-            cell.imageStoreImageView.image = UIImage(named: "test")
-            cell.categoryImageView.image = UIImage(named: "growth")
-            cell.ratingStarRatingView.value = 2.5
-            cell.headerLabel.text = "อันยอง~ Korean Dessert Cafe สไตล์เกาหลีของจริง"
-            cell.dateLabel.text = "ภายใน " + "19/8/59"
-            cell.viewNumberLabel.text = "99 วิว"
-            cell.usedNumberLabel.text = "98 ครั้ง"
-            cell.donateNumberLabel.text = "512.78 บาท"
-        }
-        
+            cell.viewNumberLabel.text = "\(Utils.convertNumberToStringCurrency( Double(data.statistic.view)) ) วิว"
+            cell.usedNumberLabel.text = "\(Utils.convertNumberToStringCurrency( Double(data.statistic.usage))) ครั้ง"
+            cell.donateNumberLabel.text = "\(Utils.convertNumberToStringCurrency( Double(data.statistic.donate))) บาท"
         return cell
     }
     

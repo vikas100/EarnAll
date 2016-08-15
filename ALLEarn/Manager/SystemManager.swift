@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import KVNProgress
 
 class SystemManager {
-
+    
     static func checkLogin()->Bool{
         return NSUserDefaults().boolForKey("login")
     }
@@ -32,5 +33,16 @@ class SystemManager {
             [NSFontAttributeName: UIFont(name:"SukhumvitSet-Medium", size:11)!,
                 NSForegroundColorAttributeName: ColorManager.getBlueTextPastel()],
             forState: .Selected)
+        
+        setUpLoadingProgress()
+    }
+    
+    static func setUpLoadingProgress(){
+        let config = KVNProgressConfiguration()
+        let color = ColorManager.getBluePastel()
+        config.statusColor = color
+        config.circleStrokeForegroundColor = color
+        config.successColor = color
+        KVNProgress.setConfiguration(config)
     }
 }
