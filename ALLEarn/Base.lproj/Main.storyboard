@@ -510,6 +510,37 @@
                                             <outlet property="viewNumberLabel" destination="w5j-xN-pmN" id="Rw2-pp-Mzy"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableLoadingView" rowHeight="45" id="sDG-s0-Nuc">
+                                        <rect key="frame" x="0.0" y="326" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sDG-s0-Nuc" id="jGs-6J-5eb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nb9-F3-OhV">
+                                                    <rect key="frame" x="10" y="0.0" width="355" height="45"/>
+                                                    <subviews>
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="I1u-Yk-lX1">
+                                                            <rect key="frame" x="167" y="13" width="20" height="20"/>
+                                                        </activityIndicatorView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="I1u-Yk-lX1" firstAttribute="centerX" secondItem="Nb9-F3-OhV" secondAttribute="centerX" id="PQO-8k-1SR"/>
+                                                        <constraint firstItem="I1u-Yk-lX1" firstAttribute="centerY" secondItem="Nb9-F3-OhV" secondAttribute="centerY" id="pM6-gU-jON"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="Nb9-F3-OhV" firstAttribute="leading" secondItem="jGs-6J-5eb" secondAttribute="leading" constant="10" id="0Km-Ym-h4f"/>
+                                                <constraint firstAttribute="bottom" secondItem="Nb9-F3-OhV" secondAttribute="bottom" id="cGH-pJ-tW9"/>
+                                                <constraint firstAttribute="trailing" secondItem="Nb9-F3-OhV" secondAttribute="trailing" constant="10" id="vR3-Io-rkr"/>
+                                                <constraint firstItem="Nb9-F3-OhV" firstAttribute="top" secondItem="jGs-6J-5eb" secondAttribute="top" id="yA6-DL-kYI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="VIt-B0-f8y" id="cV1-4g-YCm"/>
@@ -1403,8 +1434,8 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="8hE-Au-fZS"/>
                                                         <exclude reference="8cR-sL-asb"/>
+                                                        <exclude reference="8hE-Au-fZS"/>
                                                     </mask>
                                                 </variation>
                                             </imageView>

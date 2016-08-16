@@ -42,6 +42,7 @@ class ProductDetailViewController: BaseViewController, UICollectionViewDelegate,
         //        toggleButton()
     }
     override func initView() {
+         AppDelegate.drawer?.openDrawerGestureModeMask  = .None
         self.navigationController!.tabBarController?.tabBar.translucent = false
         
     }
@@ -76,7 +77,6 @@ class ProductDetailViewController: BaseViewController, UICollectionViewDelegate,
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ProductDetailCollectionViewCell", forIndexPath: indexPath) as! ProductDetailCollectionViewCell
         cell.imageImageView.image = UIImage(named: "test")
         return cell
-        
     }
     
     
