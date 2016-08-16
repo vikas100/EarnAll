@@ -25,6 +25,7 @@ class ProductFilterUITableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    @IBOutlet weak var percentDiscountLabel: UILabelBold!
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

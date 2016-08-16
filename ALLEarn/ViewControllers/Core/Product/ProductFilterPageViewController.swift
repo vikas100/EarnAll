@@ -69,6 +69,7 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
         cell.ratingStarRatingView.value = data.statistic.rating
         cell.headerLabel.text = data.title
         cell.dateLabel.text = "ภายใน " + "19/8/59"
+        cell.percentDiscountLabel.text = "\(data.percentDiscount) %"
         cell.viewNumberLabel.text = "\(Utils.convertNumberToStringCurrency( Double(data.statistic.view)) ) วิว"
         cell.usedNumberLabel.text = "\(Utils.convertNumberToStringCurrency( Double(data.statistic.usage))) ครั้ง"
         cell.donateNumberLabel.text = "\(Utils.convertNumberToStringCurrency( Double(data.statistic.donate))) บาท"

@@ -17,6 +17,7 @@ class ProductModel: BaseModel {
     var statistic = StatisticModel()
     var category = CategoryModel()
     var image = PictureModel()
+    var percentDonate = 0
     
     override init(){
         super.init()
@@ -34,6 +35,12 @@ class ProductModel: BaseModel {
             if(!item.isMemberOfClass(NSNull.self))
             {
                 percentDiscount = item as! Int
+            }
+        }
+        if let item = source["percentDonate"]{
+            if(!item.isMemberOfClass(NSNull.self))
+            {
+                percentDonate = item as! Int
             }
         }
         if let item = source["name"]{

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductDetailViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ProductDetailViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource , UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var donateLabel: UILabelBold!
     @IBOutlet weak var pagingPageControl: UIPageControl!
     
@@ -85,7 +85,24 @@ class ProductDetailViewController: BaseViewController, UICollectionViewDelegate,
         return CGSizeMake(size  ,180)
     }
     
+    // MARK: Review Table View
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCellWithIdentifier("ProductDetailTableViewCell", forIndexPath: indexPath) as! ProductDetailTableViewCell
+        
+        cell.titleLabel.text = "Very Good"
+        cell.ratingView.value = 5
+        cell.userNameLabel.text = "ช่างแอร์"
+        cell.dateLabel.text = "31 สิงหาคม 2559"
+        cell.detailLabel.text = "ตอบโจทย์ครับ สถานที่ๆน่าสนใจมีเยอะมากครับ"
+        return cell
+    }
     
 }
