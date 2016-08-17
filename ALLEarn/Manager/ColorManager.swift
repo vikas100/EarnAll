@@ -27,16 +27,20 @@ class ColorManager: NSObject {
     }
     
     static func getBlueNewPastel()->UIColor{
-        return UIColor(red: 54/255, green: 129/255, blue: 194/255, alpha: 1)
+        return UIColor(red: 28/255, green: 146/255, blue: 207/255, alpha: 1)//UIColor(red: 54/255, green: 129/255, blue: 194/255, alpha: 1)
     }
 
     static func getBlueTextPastel()->UIColor{
         return UIColor(red: 40/255, green: 133/255, blue: 195/255, alpha: 1)
     }
     
+    static func getMenuBlueHilight()->UIColor{
+        return UIColor(red: 159/255, green: 210/255, blue: 227/255, alpha: 1)//UIColor(red: 147/255, green: 194/255, blue: 209/255, alpha: 1)//UIColor(red: 152/255, green: 180/255, blue: 195/255, alpha: 1)
+    }
     static func getGrayText()->UIColor{
         return UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)
     }
+    
     
 //    static func getBlueTextPastel()->UIColor{
 //        return UIColor(red: 40/255, green: 119/255, blue: 189/255, alpha: 1)

@@ -35,7 +35,7 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
     }
     
     func initData(){
-//        KVNProgress.show()
+        //        KVNProgress.show()
         loadDataMore(currentIndex)
     }
     
@@ -98,13 +98,15 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
         refreshLoadingViewTo(true)
         Service.getInstance().get("products",parameters: ["page":index,"limit":maxItem], type: ProductModel.self) { (result, data, errorMessage) in
             self.isLoad = false
-            self.listData.appendContentsOf(data!)
-            self.currentIndex = self.listData.count
-            self.tableTableView.reloadData()
-            KVNProgress.dismiss()
             self.refreshLoadingViewTo(false)
-             self.tableTableView.tableFooterView?.frame.size.height = 0
-            self.tableTableView.tableFooterView!.layoutIfNeeded()
+            KVNProgress.dismiss()
+            if data != nil {
+                self.listData.appendContentsOf(data!)
+                self.currentIndex = self.listData.count
+                self.tableTableView.reloadData()
+                self.tableTableView.tableFooterView?.frame.size.height = 0
+                self.tableTableView.tableFooterView!.layoutIfNeeded()
+            }
         }
     }
     

@@ -14,23 +14,25 @@ class QRViewController : ButtonBarPagerTabStripViewController {
         settingButtonBarPagerTab()
         super.viewDidLoad()
         setFontTitleBar()
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         // Do any additional setup after loading the view.
     }
     
     func settingButtonBarPagerTab(){
         
-        buttonBarView.frame.origin.y = 64
-        let hilightColor  = ColorManager.getDarkGreen()
-        let backgroudColor  =  ColorManager.getBluePastel()
+//        buttonBarView.frame.origin.y = 64
+        let hilightColor  = ColorManager.getMenuBlueHilight()
+        let backgroudColor  =  ColorManager.getBlueNewPastel()
         
         
         //     UITabBar.appearance().ba
         settings.style.buttonBarBackgroundColor = backgroudColor
         settings.style.buttonBarItemBackgroundColor = backgroudColor
         settings.style.selectedBarBackgroundColor = .whiteColor()
-        settings.style.buttonBarItemFont =  UIFont(name: "SukhumvitSet-SemiBold", size: 14)!//.boldSystemFontOfSize(14)
+        settings.style.buttonBarItemFont =  UIFont(name: "SukhumvitSet-SemiBold", size: 15)!//.boldSystemFontOfSize(14)
         //        settings.style.co
-        settings.style.selectedBarHeight = 2.0
+        settings.style.selectedBarHeight = 4.0
         settings.style.buttonBarMinimumLineSpacing = 0
         settings.style.buttonBarItemTitleColor = UIColor.whiteColor()
         settings.style.buttonBarItemsShouldFillAvailiableWidth = true
@@ -38,9 +40,9 @@ class QRViewController : ButtonBarPagerTabStripViewController {
         settings.style.buttonBarRightContentInset = 0
         //        settings.style.buttonBarHeight = 20
         
-        buttonBarView.frame = CGRect(x: 0, y: 64, width: buttonBarView.frame.width, height: 35)
+        buttonBarView.frame = CGRect(x: 0, y: 0, width: buttonBarView.frame.width, height: 35)
         
-        let treashow = 64 + buttonBarView.frame.height
+        let treashow = buttonBarView.frame.height
         containerView.frame = CGRect(x: 0, y: treashow, width: containerView.frame.width, height: containerView.frame.height - treashow)
         
         changeCurrentIndexProgressive = {  (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
