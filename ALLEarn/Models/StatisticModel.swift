@@ -38,7 +38,7 @@ class StatisticModel: BaseModel {
                 view = item as! Int
             }
         }
-        if let item = source["donate"]{
+        if let item = source["totalDonate"]{
             if(!item.isMemberOfClass(NSNull.self))
             {
                 donate = item as! Int

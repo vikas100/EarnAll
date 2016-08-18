@@ -18,6 +18,7 @@ class ProductModel: BaseModel {
     var category = CategoryModel()
     var image = PictureModel()
     var percentDonate = 0
+    var business = BusinessModel()
     
     override init(){
         super.init()
@@ -71,6 +72,12 @@ class ProductModel: BaseModel {
             if(!item.isMemberOfClass(NSNull.self))
             {
                 category =  CategoryModel(source: item as! NSDictionary)
+            }
+        }
+        if let item = source["business_id"]{
+            if(!item.isMemberOfClass(NSNull.self))
+            {
+                business =  BusinessModel(source: item as! NSDictionary)
             }
         }
         if let item = source["pictures"] as? NSArray{

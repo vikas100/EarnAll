@@ -10,6 +10,8 @@ import UIKit
 
 class ProductDropDownViewController: BaseViewController , UICollectionViewDataSource, UICollectionViewDelegate {
     
+    let texts = ["ทั้งหมด","อาหาร และ เครื่องดื่ม", "แฟชั่น","กีฬา","ที่พัก","คาร์แคร์", "ประดับยนต์","สปา","กิจกรรม"]
+    
     override func viewDidLoad() {
         titleColor = UIColor.blackColor()
         super.viewDidLoad()
@@ -23,14 +25,14 @@ class ProductDropDownViewController: BaseViewController , UICollectionViewDataSo
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return texts.count
     }
     
     @IBAction func closeButtonAction(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    let texts = ["ทั้งหมด","ความงาม", "อาหาร","รถยนต์","เครื่องแต่งกาย","ที่พักอาศัย", "อาหาร","รถยนต์","เครื่องแต่งกาย"]
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ProductDropDownViewCell", forIndexPath: indexPath) as! ProductDropDownCollectionViewCell
         cell.titleLable.text = texts[indexPath.row]

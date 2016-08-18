@@ -292,19 +292,19 @@
                                                             </variation>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badgeDiscount" translatesAutoresizingMaskIntoConstraints="NO" id="tup-pC-0DD">
-                                                            <rect key="frame" x="290" y="0.0" width="65" height="65"/>
+                                                            <rect key="frame" x="275" y="0.0" width="80" height="80"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="65" id="6FK-XJ-2fe"/>
-                                                                <constraint firstAttribute="height" constant="65" id="QMB-Rg-DFY"/>
+                                                                <constraint firstAttribute="width" constant="80" id="6FK-XJ-2fe"/>
+                                                                <constraint firstAttribute="height" constant="80" id="QMB-Rg-DFY"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ได้คืน" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHg-X6-zcs" customClass="UILabelBold" customModule="ALLEarn" customModuleProvider="target">
-                                                            <rect key="frame" x="308" y="27" width="30" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รับ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHg-X6-zcs" customClass="UILabelBold" customModule="ALLEarn" customModuleProvider="target">
+                                                            <rect key="frame" x="308" y="29.5" width="14" height="14.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="10" id="P9Q-aL-ooi"/>
                                                                 <constraint firstAttribute="width" constant="42" id="VKv-Sw-6jG"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="default">
@@ -315,7 +315,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6y-Za-r7E" customClass="UILabelBold" customModule="ALLEarn" customModuleProvider="target">
-                                                            <rect key="frame" x="308" y="33" width="29" height="20"/>
+                                                            <rect key="frame" x="300.5" y="34" width="29" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="10" id="0XB-gG-Fwy"/>
                                                                 <constraint firstAttribute="width" constant="42" id="2jn-Hw-qg3"/>
@@ -327,6 +327,22 @@
                                                                 <mask key="constraints">
                                                                     <exclude reference="0XB-gG-Fwy"/>
                                                                     <exclude reference="2jn-Hw-qg3"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จากยอด" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubm-eO-tPq" customClass="UILabelBold" customModule="ALLEarn" customModuleProvider="target">
+                                                            <rect key="frame" x="296.5" y="44" width="38" height="13.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="10" id="Sbu-eR-aPs"/>
+                                                                <constraint firstAttribute="width" constant="42" id="X7b-dy-dpj"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="Sbu-eR-aPs"/>
+                                                                    <exclude reference="X7b-dy-dpj"/>
                                                                 </mask>
                                                             </variation>
                                                         </label>
@@ -458,6 +474,7 @@
                                                         <constraint firstItem="Ru6-qY-rdL" firstAttribute="trailing" secondItem="4cI-d4-LUU" secondAttribute="leading" constant="-5" id="1Y9-Uc-Ncc"/>
                                                         <constraint firstItem="EkN-tD-1Cd" firstAttribute="top" secondItem="DuU-lC-DdX" secondAttribute="bottom" constant="10" id="3SM-Mg-qHr"/>
                                                         <constraint firstItem="S14-6q-Wn2" firstAttribute="trailing" secondItem="UT2-to-toB" secondAttribute="leading" constant="-10" id="4D2-sm-ubO"/>
+                                                        <constraint firstItem="ubm-eO-tPq" firstAttribute="top" secondItem="i6y-Za-r7E" secondAttribute="bottom" constant="-10" id="4dQ-0k-JmG"/>
                                                         <constraint firstItem="S14-6q-Wn2" firstAttribute="centerY" secondItem="UT2-to-toB" secondAttribute="centerY" id="7Cg-rM-WVk"/>
                                                         <constraint firstItem="DuU-lC-DdX" firstAttribute="leading" secondItem="YuM-nj-v8e" secondAttribute="leading" id="7ah-gE-FLB"/>
                                                         <constraint firstItem="zcB-UW-wdn" firstAttribute="leading" secondItem="YuM-nj-v8e" secondAttribute="leading" constant="10" id="7nI-xQ-2uT"/>
@@ -472,10 +489,11 @@
                                                         <constraint firstItem="UT2-to-toB" firstAttribute="top" secondItem="v1j-uV-H0D" secondAttribute="bottom" constant="5" id="Ibv-PA-qCb"/>
                                                         <constraint firstItem="tup-pC-0DD" firstAttribute="top" secondItem="YuM-nj-v8e" secondAttribute="top" id="Ies-k3-7PH"/>
                                                         <constraint firstItem="IGQ-ie-q6d" firstAttribute="leading" secondItem="YuM-nj-v8e" secondAttribute="leading" id="J9s-lC-kVZ"/>
+                                                        <constraint firstItem="ubm-eO-tPq" firstAttribute="centerX" secondItem="i6y-Za-r7E" secondAttribute="centerX" id="LJ1-lp-ykq"/>
                                                         <constraint firstItem="r38-BK-7yq" firstAttribute="top" secondItem="DuU-lC-DdX" secondAttribute="bottom" constant="10" id="M6w-kB-y9k"/>
                                                         <constraint firstItem="rHg-X6-zcs" firstAttribute="bottom" secondItem="i6y-Za-r7E" secondAttribute="top" constant="10" id="Nws-Wb-fff"/>
                                                         <constraint firstItem="Ru6-qY-rdL" firstAttribute="leading" secondItem="IGQ-ie-q6d" secondAttribute="trailing" id="Pdg-uH-VCd"/>
-                                                        <constraint firstItem="i6y-Za-r7E" firstAttribute="top" secondItem="YuM-nj-v8e" secondAttribute="top" constant="33" id="PxF-cZ-drJ"/>
+                                                        <constraint firstItem="i6y-Za-r7E" firstAttribute="top" secondItem="YuM-nj-v8e" secondAttribute="top" constant="34" id="PxF-cZ-drJ"/>
                                                         <constraint firstItem="UB1-za-CMT" firstAttribute="centerX" secondItem="YuM-nj-v8e" secondAttribute="centerX" constant="3" id="QCL-Js-0sT"/>
                                                         <constraint firstItem="i6y-Za-r7E" firstAttribute="centerX" secondItem="tup-pC-0DD" secondAttribute="centerX" id="WrE-df-afa"/>
                                                         <constraint firstAttribute="bottom" secondItem="zcB-UW-wdn" secondAttribute="bottom" constant="10" id="XM5-Wo-4wP"/>
@@ -556,6 +574,7 @@
                                             <outlet property="percentDiscountLabel" destination="i6y-Za-r7E" id="XF3-sd-EB8"/>
                                             <outlet property="ratingStarRatingView" destination="UT2-to-toB" id="25w-za-nw0"/>
                                             <outlet property="rootView" destination="YuM-nj-v8e" id="0o1-UP-Mu9"/>
+                                            <outlet property="unitDiscountLabel" destination="ubm-eO-tPq" id="ij0-LX-Aul"/>
                                             <outlet property="usedNumberLabel" destination="Mzp-JZ-PxS" id="ANI-ot-Yzx"/>
                                             <outlet property="viewNumberLabel" destination="w5j-xN-pmN" id="Rw2-pp-Mzy"/>
                                         </connections>
@@ -1856,7 +1875,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="IKP-bm-m3v"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Bold" family="Sukhumvit Set" pointSize="18"/>
-                                <state key="normal" title="รับสิทธิ์สะสมแต้ม">
+                                <state key="normal" title="รับสิทธิ์">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">

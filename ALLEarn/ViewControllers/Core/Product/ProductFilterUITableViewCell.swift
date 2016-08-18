@@ -15,6 +15,7 @@ class ProductFilterUITableViewCell: UITableViewCell {
     @IBOutlet weak var viewNumberLabel: UILabelBold!
     @IBOutlet weak var usedNumberLabel: UILabelBold!
 
+    @IBOutlet weak var unitDiscountLabel: UILabelBold!
     @IBOutlet weak var donateNumberLabel: UILabelBold!
     @IBOutlet weak var categoryImageView: UIImageView!
     @IBOutlet weak var ratingStarRatingView: HCSStarRatingView!

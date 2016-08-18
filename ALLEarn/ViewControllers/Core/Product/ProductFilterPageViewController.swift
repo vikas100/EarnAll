@@ -18,7 +18,9 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
     var isLoad = false
     var currentIndex = 1
     var oldCurrentIndex = -1
-    var maxItem = 5
+    var maxItem = 10
+    
+    var refreshControl:UIRefreshControl!
     
     var itemHeight : CGFloat  = 325
     override func viewDidLoad() {
@@ -32,6 +34,22 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
         // setup loadding tableview
         self.tableTableView.tableFooterView = self.tableTableView.dequeueReusableCellWithIdentifier("tableLoadingView")
         self.tableTableView.tableFooterView!.hidden = true
+        self.refreshControl = UIRefreshControl()
+//        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: #selector(ProductFilterPageViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        tableTableView.addSubview(refreshControl)
+        
+    }
+    
+    
+    func refresh(sender:AnyObject)
+    {
+        listData = [ProductModel]()
+        currentIndex = 1
+        isLoad = false
+        oldCurrentIndex = -1
+        loadDataMore(currentIndex)
+        self.refreshControl.endRefreshing()
     }
     
     func initData(){
@@ -63,12 +81,12 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
         let data = listData[index]
         
         cell.imageContentImageView.kf_setImageWithURL(NSURL(string: data.image.thumb)!, placeholderImage: UIImage(named: "load-icon"))
-        //            cell.imageContentImageView.image = UIImage(named: "test")
-        cell.imageStoreImageView.image = UIImage(named: "test33")
+        cell.imageStoreImageView.kf_setImageWithURL(NSURL(string: data.business.thumb)!, placeholderImage: UIImage(named: "load-icon"))
         cell.categoryImageView.image = UIImage(named: "food2")
         cell.ratingStarRatingView.value = data.statistic.rating
         cell.headerLabel.text = data.title
         cell.dateLabel.text = "ภายใน " + "19/8/59"
+        cell.unitDiscountLabel.text = "จากยอด"
         cell.percentDiscountLabel.text = "\(data.percentDiscount) %"
         cell.viewNumberLabel.text = "\(Utils.convertNumberToStringCurrency( Double(data.statistic.view)) ) วิว"
         cell.usedNumberLabel.text = "\(Utils.convertNumberToStringCurrency( Double(data.statistic.usage))) ครั้ง"
@@ -96,7 +114,7 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
     {
         tableTableView.tableFooterView?.frame.size.height = 45
         refreshLoadingViewTo(true)
-        Service.getInstance().get("products",parameters: ["page":index,"limit":maxItem], type: ProductModel.self) { (result, data, errorMessage) in
+        Service.getInstance().get("products",parameters: ["page":index,"limit":maxItem,"include":"business","business_fields":"picture"], type: ProductModel.self) { (result, data, errorMessage) in
             self.isLoad = false
             self.refreshLoadingViewTo(false)
             KVNProgress.dismiss()
