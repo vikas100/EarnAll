@@ -10,6 +10,7 @@ import UIKit
 
 class ProductDropDownCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLable: UILabelLight!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBOutlet weak var imageImageView: UIImageView!
 }

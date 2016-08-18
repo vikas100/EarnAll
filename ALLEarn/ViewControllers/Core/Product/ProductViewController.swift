@@ -8,7 +8,12 @@
 
 import UIKit
 import XLPagerTabStrip
-class ProductViewController: ButtonBarPagerTabStripViewController {
+class ProductViewController: ButtonBarPagerTabStripViewController , ProductDropDownDelegate{
+    
+    let filters = ["date","point","topchart","range"]
+    let categories = ["all","food","fashion","spa","beautiful","resident","sport","carcare","motorsport","activity"]
+    
+    var categoryCurrentIndex = 0
     
     override func viewDidLoad() {
         settingButtonBarPagerTab()
@@ -16,12 +21,11 @@ class ProductViewController: ButtonBarPagerTabStripViewController {
         setFontTitleBar()
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-
     }
     
     func settingButtonBarPagerTab(){
         
-//        buttonBarView.frame.origin.y = 64
+        //        buttonBarView.frame.origin.y = 64
         let hilightColor  = ColorManager.getMenuBlueHilight()
         let backgroudColor  =  ColorManager.getBlueNewPastel()
         
@@ -51,34 +55,53 @@ class ProductViewController: ButtonBarPagerTabStripViewController {
             newCell?.label.textColor = .whiteColor()
             
         }
+        
+        
     }
     
     override func viewControllersForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+        
+        let cagegory = categories[categoryCurrentIndex]
         let filter1 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
         filter1.itemInfo = "วันที่"
+        filter1.filter = filters[0]
+        filter1.category = cagegory
         
         let filter2 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
         filter2.itemInfo = "คะแนน"
-        
+        filter2.filter = filters[1]
+        filter2.category = cagegory
         let filter3 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
         filter3.itemInfo = "ยอดนิยม"
+        filter3.filter = filters[2]
+        filter3.category = cagegory
         
         let filter4 = self.storyboard?.instantiateViewControllerWithIdentifier("ProductFilterPageViewController") as! ProductFilterPageViewController
         filter4.itemInfo = "ระยะทาง"
+        filter4.filter = filters[3]
+        filter4.category = cagegory
         
         return [filter1,filter2,filter3,filter4]
     }
     
     
     @IBAction func categoriesButtonAction(sender: AnyObject) {
-        let dropdownView = storyboard!.instantiateViewControllerWithIdentifier("ProductDropDownViewController") as! UINavigationController
-        
-        
-        presentViewController(dropdownView, animated: true, completion: nil)
+        let dropdownNavigationView = storyboard!.instantiateViewControllerWithIdentifier("ProductDropDownViewController") as! UINavigationController
+        let  dropdownViewController =   dropdownNavigationView.viewControllers[0] as! ProductDropDownViewController
+        dropdownViewController.delegate = self
+        presentViewController(dropdownNavigationView, animated: true, completion: nil)
     }
     
     
+    //MARK: - DropDown Delegate
+    func onDropDownSelected(index: Int, categoryName : String) {
+        self.navigationController?.navigationBar.topItem!.title = categoryName
+        categoryCurrentIndex = index
+        moveToViewControllerAtIndex(0,animated: false)
+        reloadPagerTabStripView()
+    }
     
+    //MARK: Button Action
     @IBAction func hamburgerButtonAction(sender: AnyObject) {
         toggleLeftHamburger()
     }

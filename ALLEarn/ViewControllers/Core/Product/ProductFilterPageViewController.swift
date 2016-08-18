@@ -15,6 +15,11 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
     
     var listData = [ProductModel]()
     
+    var placeHolderImageName = "allearnThumbnail"
+    
+    var filter = ""
+    var category = ""
+    
     var isLoad = false
     var currentIndex = 1
     var oldCurrentIndex = -1
@@ -80,8 +85,8 @@ class ProductFilterPageViewController:BaseIndiCatorInfoProvider, UITableViewDele
         let index = indexPath.row
         let data = listData[index]
         
-        cell.imageContentImageView.kf_setImageWithURL(NSURL(string: data.image.thumb)!, placeholderImage: UIImage(named: "load-icon"))
-        cell.imageStoreImageView.kf_setImageWithURL(NSURL(string: data.business.thumb)!, placeholderImage: UIImage(named: "load-icon"))
+        cell.imageContentImageView.kf_setImageWithURL(NSURL(string: data.image.thumb)!, placeholderImage: UIImage(named: placeHolderImageName))
+        cell.imageStoreImageView.kf_setImageWithURL(NSURL(string: data.business.thumb)!, placeholderImage: UIImage(named: placeHolderImageName))
         cell.categoryImageView.image = UIImage(named: "food2")
         cell.ratingStarRatingView.value = data.statistic.rating
         cell.headerLabel.text = data.title

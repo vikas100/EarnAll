@@ -8,9 +8,17 @@
 
 import UIKit
 
+protocol ProductDropDownDelegate {
+    func onDropDownSelected(index : Int, categoryName : String)
+}
+
 class ProductDropDownViewController: BaseViewController , UICollectionViewDataSource, UICollectionViewDelegate {
     
-    let texts = ["ทั้งหมด","อาหาร และ เครื่องดื่ม", "แฟชั่น","กีฬา","ที่พัก","คาร์แคร์", "ประดับยนต์","สปา","กิจกรรม"]
+    var delegate : ProductDropDownDelegate?
+    let texts = ["ทั้งหมด","อาหาร และ เครื่องดื่ม", "แฟชั่น","สปา","ความงาม","ที่พัก","กีฬา","คาร์แคร์", "ประดับยนต์","กิจกรรม"]
+    let images = ["all","foodCategory","fashion","spa","beauty","resident","sport","carcare","caraccessories","activity"]
+  
+    let imageIcon = ["allIcon","foodIcon","fashionIcon","spaIcon","beautifulIcon","residentIcon","sportIcon","carcareIcon","caraccessoriesIcon","activitiesIcon"]
     
     override func viewDidLoad() {
         titleColor = UIColor.blackColor()
@@ -35,16 +43,20 @@ class ProductDropDownViewController: BaseViewController , UICollectionViewDataSo
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ProductDropDownViewCell", forIndexPath: indexPath) as! ProductDropDownCollectionViewCell
-        cell.titleLable.text = texts[indexPath.row]
+        let index = indexPath.row
+        cell.titleLable.text = texts[index]
+        cell.imageImageView.image = UIImage(named: imageIcon[index])
+        cell.backgroundImageView.image = UIImage(named: images[index])
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let size = (collectionView.bounds.width / 2)
-        return CGSizeMake(size  ,size)
+        return CGSizeMake( size ,size)
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        delegate!.onDropDownSelected(indexPath.row,categoryName: texts[indexPath.row])
         dismissViewControllerAnimated(true, completion: nil)
     }
 }
