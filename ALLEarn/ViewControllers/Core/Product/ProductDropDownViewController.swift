@@ -44,9 +44,20 @@ class ProductDropDownViewController: BaseViewController , UICollectionViewDataSo
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ProductDropDownViewCell", forIndexPath: indexPath) as! ProductDropDownCollectionViewCell
         let index = indexPath.row
-        cell.titleLable.text = texts[index]
-        cell.imageImageView.image = UIImage(named: imageIcon[index])
-        cell.backgroundImageView.image = UIImage(named: images[index])
+        
+        if index == 0 {
+            cell.titleLable.hidden = true
+            cell.imageImageView.hidden = true
+            cell.allLabel.hidden = false
+        }
+        else{
+            cell.titleLable.hidden = false
+            cell.imageImageView.hidden = false
+            cell.allLabel.hidden = true
+            cell.titleLable.text = texts[index]
+            cell.imageImageView.image = UIImage(named: imageIcon[index])
+        }
+              cell.backgroundImageView.image = UIImage(named: images[index])
         return cell
     }
     

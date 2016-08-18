@@ -12,5 +12,6 @@ class ProductDropDownCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLable: UILabelLight!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
+    @IBOutlet weak var allLabel: UILabelLight!
     @IBOutlet weak var imageImageView: UIImageView!
 }

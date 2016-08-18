@@ -16,29 +16,21 @@ class QRViewController : ButtonBarPagerTabStripViewController {
         setFontTitleBar()
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        // Do any additional setup after loading the view.
     }
     
     func settingButtonBarPagerTab(){
-        
-//        buttonBarView.frame.origin.y = 64
         let hilightColor  = ColorManager.getMenuBlueHilight()
         let backgroudColor  =  ColorManager.getBlueNewPastel()
-        
-        
-        //     UITabBar.appearance().ba
         settings.style.buttonBarBackgroundColor = backgroudColor
         settings.style.buttonBarItemBackgroundColor = backgroudColor
         settings.style.selectedBarBackgroundColor = .whiteColor()
-        settings.style.buttonBarItemFont =  UIFont(name: "SukhumvitSet-SemiBold", size: 15)!//.boldSystemFontOfSize(14)
-        //        settings.style.co
+        settings.style.buttonBarItemFont =  UIFont(name: "SukhumvitSet-SemiBold", size: 15)!
         settings.style.selectedBarHeight = 4.0
         settings.style.buttonBarMinimumLineSpacing = 0
         settings.style.buttonBarItemTitleColor = UIColor.whiteColor()
         settings.style.buttonBarItemsShouldFillAvailiableWidth = true
         settings.style.buttonBarLeftContentInset = 0
         settings.style.buttonBarRightContentInset = 0
-        //        settings.style.buttonBarHeight = 20
         
         buttonBarView.frame = CGRect(x: 0, y: 0, width: buttonBarView.frame.width, height: 35)
         
@@ -57,7 +49,7 @@ class QRViewController : ButtonBarPagerTabStripViewController {
         let filter1 = self.storyboard?.instantiateViewControllerWithIdentifier("MyQRViewController") as! MyQRViewController
         filter1.itemInfo = "QR ของฉัน"
         
-        let filter2 = self.storyboard?.instantiateViewControllerWithIdentifier("MyQRViewController") as! MyQRViewController
+        let filter2 = self.storyboard?.instantiateViewControllerWithIdentifier("ScanQRViewController") as! ScanQRViewController
         filter2.itemInfo = "สแกน QR"
     return [filter1,filter2]
     }
