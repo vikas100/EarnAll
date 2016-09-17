@@ -1,5 +1,10 @@
 PODS:
-  - Alamofire (3.4.1)
+  - Alamofire (3.4.2)
+  - Branch (0.12.6):
+    - Branch/Core (= 0.12.6)
+    - Branch/without-IDFA (= 0.12.6)
+  - Branch/Core (0.12.6)
+  - Branch/without-IDFA (0.12.6)
   - HCSStarRatingView (1.4.5)
   - Kingfisher (1.9.3)
   - KVNProgress (2.3)
@@ -22,6 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - Branch (~> 0.12)
   - HCSStarRatingView (~> 1.4)
   - Kingfisher (~> 1.9)
   - KVNProgress (~> 2.3)
@@ -30,7 +36,8 @@ DEPENDENCIES:
   - XLPagerTabStrip (~> 5.0)
 
 SPEC CHECKSUMS:
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
+  Branch: 4c28f0844fe0dcd2535654a862b52a21ebde6386
   HCSStarRatingView: bff3f89314d3b5013ce826ea11897d3129ff6b8c
   Kingfisher: 9e37d2a78a082dc123bfe8a16de65de85518daae
   KVNProgress: d0459bfa4dca0379cdba5c038326ea34e9fc2df9

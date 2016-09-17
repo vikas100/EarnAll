@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-ALLEarn/Alamofire.framework"
+  install_framework "Pods-ALLEarn/Branch.framework"
   install_framework "Pods-ALLEarn/HCSStarRatingView.framework"
   install_framework "Pods-ALLEarn/KVNProgress.framework"
   install_framework "Pods-ALLEarn/Kingfisher.framework"
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-ALLEarn/Alamofire.framework"
+  install_framework "Pods-ALLEarn/Branch.framework"
   install_framework "Pods-ALLEarn/HCSStarRatingView.framework"
   install_framework "Pods-ALLEarn/KVNProgress.framework"
   install_framework "Pods-ALLEarn/Kingfisher.framework"

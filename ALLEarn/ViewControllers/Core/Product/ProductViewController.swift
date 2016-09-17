@@ -11,7 +11,7 @@ import XLPagerTabStrip
 class ProductViewController: ButtonBarPagerTabStripViewController , ProductDropDownDelegate{
     
     let filters = ["date","point","topchart","range"]
-    let categories = ["all","food","fashion","spa","beautiful","resident","sport","carcare","motorsport","activity"]
+    let categories = ["0","31200000000000000000001","31200000000000000000002","31200000000000000000003","31200000000000000000004","31200000000000000000005","31200000000000000000006","31200000000000000000007","31200000000000000000008","31200000000000000000009"]
     
     var categoryCurrentIndex = 0
     
@@ -53,7 +53,6 @@ class ProductViewController: ButtonBarPagerTabStripViewController , ProductDropD
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = hilightColor
             newCell?.label.textColor = .whiteColor()
-            
         }
         
         

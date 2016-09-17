@@ -9,4 +9,5 @@ target ‘ALLEarn’ do
     pod 'Alamofire', '~> 3.4’
     pod 'Kingfisher', '~> 1.9'
     pod 'KVNProgress', '~> 2.3'
+    pod 'Branch', '~> 0.12’
 end

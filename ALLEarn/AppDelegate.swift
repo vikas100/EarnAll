@@ -8,6 +8,7 @@
 
 import UIKit
 import MMDrawerController
+import Branch
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.shareWindow = window
         SystemManager.initUI()
         
+        
+        let branch: Branch = Branch.getInstance()
+        
+        
+        branch.initSessionWithLaunchOptions(launchOptions, andRegisterDeepLinkHandler: { optParams, error in
+            if error == nil, let params : AnyObject? = optParams {
+                // params are the deep linked params associated with the link that the user clicked -> was re-directed to this app
+                // params will be empty if no data found
+                // ... insert custom logic here ...
+                print("params: %@", params!.description)
+            }
+        })
+
+        
+        
+        
         if (SystemManager.checkLogin())
         {
             self.window!.rootViewController =  AppDelegate.initDrawerMenu()
@@ -31,6 +48,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         return true
     }
+    
+    
+    // Respond to URI scheme links
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        // pass the url to the handle deep link call
+        Branch.getInstance().handleDeepLink(url);
+        
+        // do other deep link routing for the Facebook SDK, Pinterest SDK, etc
+        return true
+    }
+    
+    // Respond to Universal Links
+    func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
+        // pass the url to the handle deep link call
+        
+        return Branch.getInstance().continueUserActivity(userActivity)
+    }
+
+    
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
