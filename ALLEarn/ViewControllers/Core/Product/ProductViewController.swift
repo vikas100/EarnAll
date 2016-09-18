@@ -55,7 +55,6 @@ class ProductViewController: ButtonBarPagerTabStripViewController , ProductDropD
             newCell?.label.textColor = .whiteColor()
         }
         
-        
     }
     
     override func viewControllersForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
